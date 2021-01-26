@@ -1,0 +1,25 @@
+EESchema-LIBRARY Version 2.3
+#encoding utf-8
+#(c) SnapEDA 2016 (snapeda.com)
+#This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License (CC BY-SA) with Design Exception 1.0
+#
+# MINISMDC110F/16-2
+#
+DEF MINISMDC110F/16-2 U 0 40 N N 1 L N
+F0 "U" -200 100 50 H V L BNN
+F1 "MINISMDC110F/16-2" -200 -150 50 H V L BNN
+F2 "MINISMDC110" 0 0 50 H I L BNN
+DRAW
+P 2 0 0 10 -200 0 -140 60 N
+P 2 0 0 10 0 -60 -100 60 N
+P 2 0 0 10 35 -59 98 0 N
+A -120 38 30 2700 3160 0 0 10 N -142 59 -120 68
+A -120 38 30 2240 2700 0 0 10 N -120 68 -98 59
+A 17 -50 20 2730 3360 0 0 10 N 18 -70 35 -58
+A 17 -50 20 2080 2730 0 0 10 N -1 -59 18 -70
+X ~ P$1 -300 0 100 R 40 40 0 0 P I
+X ~ P$2 200 0 100 L 40 40 0 0 P I
+ENDDRAW
+ENDDEF
+#
+# End Library

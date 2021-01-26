@@ -1,0 +1,12 @@
+(sym_lib_table
+  (lib (name DRV8818PWP)(type Legacy)(uri ${KIPRJMOD}/MK2Library/DRV8818PWP.lib)(options "")(descr ""))
+  (lib (name MC74HC595ADG)(type Legacy)(uri ${KIPRJMOD}/MK2Library/MC74HC595ADG.lib)(options "")(descr ""))
+  (lib (name MINISMDC110)(type Legacy)(uri ${KIPRJMOD}/MK2Library/MINISMDC110.lib)(options "")(descr ""))
+  (lib (name S2B-PH-K-S_LF__SN_)(type Legacy)(uri ${KIPRJMOD}/MK2Library/S2B-PH-K-S_LF__SN_.lib)(options "")(descr ""))
+  (lib (name S4B-PH-K-S_LF__SN_)(type Legacy)(uri ${KIPRJMOD}/MK2Library/S4B-PH-K-S_LF__SN_.lib)(options "")(descr ""))
+  (lib (name S5B-PH-K-S_LF__SN_)(type Legacy)(uri ${KIPRJMOD}/MK2Library/S5B-PH-K-S_LF__SN_.lib)(options "")(descr ""))
+  (lib (name AS5047D-ATSM)(type Legacy)(uri ${KIPRJMOD}/MK2Library/AS5047D-ATSM.lib)(options "")(descr ""))
+  (lib (name ASMB-KTF0-0A306)(type Legacy)(uri ${KIPRJMOD}/MK2Library/ASMB-KTF0-0A306.lib)(options "")(descr ""))
+  (lib (name NUCLEO-F411RE)(type Legacy)(uri "P:/TFM/KiCad Projects/MK2EE/MK2EE/MK2Library/NUCLEO-F401RE.lib")(options "")(descr ""))
+  (lib (name MK2EE-rescue)(type Legacy)(uri ${KIPRJMOD}/MK2EE-rescue.lib)(options "")(descr ""))
+)

@@ -1,0 +1,483 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 6 7
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L MC74HC595ADG:MC74HC595ADG U?
+U 1 1 5F4E32D9
+P 2800 2650
+AR Path="/5F50F8AC/5F4E32D9" Ref="U?"  Part="1" 
+AR Path="/5F4C6BF4/5F4E32D9" Ref="U4"  Part="1" 
+F 0 "U4" H 2800 3520 50  0000 C CNN
+F 1 "MC74HC595ADG" H 2800 3429 50  0000 C CNN
+F 2 "MK2Library:MC74HC595ADG" H 2800 2650 50  0001 L BNN
+F 3 "MC74HC595ADG" H 2800 2650 50  0001 L BNN
+F 4 "MC74HC595ADG" H 2800 2650 50  0001 C CNN "Name"
+F 5 "On Semiconductor" H 2800 2650 50  0001 L BNN "Manufacturer"
+	1    2800 2650
+	1    0    0    -1  
+$EndComp
+$Comp
+L S5B-PH-K-S_LF__SN_:S5B-PH-K-S(LF)(SN) J?
+U 1 1 5F4E32E1
+P 9600 3100
+AR Path="/5F50F8AC/5F4E32E1" Ref="J?"  Part="1" 
+AR Path="/5F4C6BF4/5F4E32E1" Ref="J7"  Part="1" 
+F 0 "J7" H 9930 3191 50  0000 L CNN
+F 1 "Digital Signals Output" H 9930 3100 50  0000 L CNN
+F 2 "MK2Library:S5B-PH-K-S_LF__SN_" H 9600 3100 50  0001 L BNN
+F 3 "JST Sales" H 9600 3100 50  0001 L BNN
+F 4 "S5B-PH-SM4-TB" H 9930 3009 50  0000 L CNN "Name"
+F 5 "JST" H 9600 3100 50  0001 C CNN "Manufacturer"
+	1    9600 3100
+	1    0    0    -1  
+$EndComp
+$Comp
+L S5B-PH-K-S_LF__SN_:S5B-PH-K-S(LF)(SN) J?
+U 1 1 5F4E32E9
+P 9600 2250
+AR Path="/5F50F8AC/5F4E32E9" Ref="J?"  Part="1" 
+AR Path="/5F4C6BF4/5F4E32E9" Ref="J6"  Part="1" 
+F 0 "J6" H 9930 2341 50  0000 L CNN
+F 1 "Digital Signals Input" H 9930 2250 50  0000 L CNN
+F 2 "MK2Library:S5B-PH-K-S_LF__SN_" H 9600 2250 50  0001 L BNN
+F 3 "JST Sales" H 9600 2250 50  0001 L BNN
+F 4 "S5B-PH-SM4-TB" H 9930 2159 50  0000 L CNN "Name"
+F 5 "JST" H 9600 2250 50  0001 C CNN "Manufacturer"
+	1    9600 2250
+	1    0    0    -1  
+$EndComp
+Text GLabel 3950 2150 2    50   Output ~ 0
+CSn
+Text GLabel 3950 2250 2    50   Output ~ 0
+LED1-R
+Text GLabel 3950 2350 2    50   Output ~ 0
+LED1-G
+Text GLabel 3950 2450 2    50   Output ~ 0
+LED1-B
+Text GLabel 3950 2550 2    50   Output ~ 0
+LED2-R
+Text GLabel 3950 2650 2    50   Output ~ 0
+LED2-G
+NoConn ~ 3700 2850
+Wire Wire Line
+	3700 2150 3950 2150
+Wire Wire Line
+	3700 2250 3950 2250
+Wire Wire Line
+	3700 2350 3950 2350
+Wire Wire Line
+	3700 2450 3950 2450
+Wire Wire Line
+	3700 2550 3950 2550
+Wire Wire Line
+	3700 2650 3950 2650
+Text GLabel 9150 2250 0    50   Output ~ 0
+MOSI
+Text GLabel 9150 2150 0    50   Output ~ 0
+MISO
+Text GLabel 9150 2050 0    50   Output ~ 0
+SH-CLKEn
+Text GLabel 9150 2350 0    50   Output ~ 0
+SerialDataInEn
+Text GLabel 9150 2450 0    50   Output ~ 0
+PO-CLKEn
+Wire Wire Line
+	9150 2050 9400 2050
+Wire Wire Line
+	9150 2150 9400 2150
+Wire Wire Line
+	9150 2250 9400 2250
+Wire Wire Line
+	9150 2350 9400 2350
+Wire Wire Line
+	9150 2450 9400 2450
+Wire Wire Line
+	9150 2900 9400 2900
+Wire Wire Line
+	9150 3000 9400 3000
+Wire Wire Line
+	9150 3100 9400 3100
+Wire Wire Line
+	9150 3200 9400 3200
+Wire Wire Line
+	9150 3300 9400 3300
+Text GLabel 1650 2150 0    50   Input ~ 0
+VCC
+Text GLabel 1650 3350 0    50   Input ~ 0
+GND
+Text GLabel 1650 2550 0    50   Input ~ 0
+SH-CLKEn
+Text GLabel 1650 2650 0    50   Input ~ 0
+PO-CLKEn
+Wire Wire Line
+	1650 2150 1800 2150
+Wire Wire Line
+	1650 2550 1900 2550
+Wire Wire Line
+	1650 2650 1900 2650
+Wire Wire Line
+	1650 3350 1900 3350
+Wire Wire Line
+	1800 2150 1800 2350
+Wire Wire Line
+	1800 2350 1900 2350
+Connection ~ 1800 2150
+Wire Wire Line
+	1800 2150 1900 2150
+NoConn ~ 1900 2850
+Text GLabel 1650 3050 0    50   Output ~ 0
+SerialDataOutEn
+Text GLabel 1650 3150 0    50   Input ~ 0
+SerialDataInEn
+Wire Wire Line
+	1650 3050 1900 3050
+Wire Wire Line
+	1650 3150 1900 3150
+Text GLabel 3950 2750 2    50   Output ~ 0
+LED2-B
+Wire Wire Line
+	3700 2750 3950 2750
+Text GLabel 9150 3100 0    50   Input ~ 0
+MOSI
+Text GLabel 9150 3000 0    50   Input ~ 0
+MISO
+Text GLabel 9150 2900 0    50   Input ~ 0
+SH-CLKEn
+Text GLabel 9150 3200 0    50   Input ~ 0
+SerialDataOutEn
+Text GLabel 9150 3300 0    50   Input ~ 0
+PO-CLKEn
+$Comp
+L AS5047D-ATSM:AS5047D-ATSM IC?
+U 1 1 5F4FB138
+P 5900 2400
+AR Path="/5F4C6CE4/5F4FB138" Ref="IC?"  Part="1" 
+AR Path="/5F4C6BF4/5F4FB138" Ref="IC1"  Part="1" 
+F 0 "IC1" H 6500 2665 50  0000 C CNN
+F 1 "AS5047D-ATSM" H 6500 2574 50  0000 C CNN
+F 2 "MK2Library:AS5047D-ATSM" H 6950 2500 50  0001 L CNN
+F 3 "http://ams.com/eng/content/download/595083/1609657/320155" H 6950 2400 50  0001 L CNN
+F 4 "AS5047D-ATSM" H 5900 2400 50  0001 C CNN "Name"
+F 5 "ams" H 6950 1900 50  0001 L CNN "Manufacturer"
+F 6 "ams AS5047D-ATSM Hall Effect Sensor 14-Pin TSSOP, 3  3.6 V, 4.5  5.5 V" H 6950 2300 50  0001 L CNN "Description"
+F 7 "1.2" H 6950 2200 50  0001 L CNN "Height"
+F 8 "985-AS5047D-ATSM" H 6950 2100 50  0001 L CNN "Mouser Part Number"
+F 9 "https://www.mouser.co.uk/ProductDetail/ams/AS5047D-ATSM?qs=qEcPHXRbv51jEdbehV7Mjw%3D%3D" H 6950 2000 50  0001 L CNN "Mouser Price/Stock"
+F 10 "AS5047D-ATSM" H 6950 1800 50  0001 L CNN "Manufacturer_Part_Number"
+	1    5900 2400
+	1    0    0    -1  
+$EndComp
+NoConn ~ 7100 2400
+NoConn ~ 7100 2800
+NoConn ~ 7100 2900
+NoConn ~ 7100 3000
+NoConn ~ 5900 2900
+NoConn ~ 5900 3000
+Text GLabel 5550 2400 0    50   Input ~ 0
+CSn
+Text GLabel 5550 2500 0    50   Input ~ 0
+SH-CLKEn
+Text GLabel 5550 2600 0    50   Input ~ 0
+MISO
+Text GLabel 5550 2700 0    50   Input ~ 0
+MOSI
+Text GLabel 7750 2700 2    50   Input ~ 0
+CSn
+Wire Wire Line
+	5550 2400 5900 2400
+Wire Wire Line
+	5550 2500 5900 2500
+Wire Wire Line
+	5550 2600 5900 2600
+Wire Wire Line
+	5550 2700 5900 2700
+Wire Wire Line
+	7100 2700 7400 2700
+Wire Wire Line
+	7100 2600 7400 2600
+Wire Wire Line
+	7400 2600 7400 2700
+Connection ~ 7400 2700
+Wire Wire Line
+	7400 2700 7750 2700
+$Comp
+L power:GND #PWR?
+U 1 1 5F4FB152
+P 7100 2500
+AR Path="/5F4C6CE4/5F4FB152" Ref="#PWR?"  Part="1" 
+AR Path="/5F4C6BF4/5F4FB152" Ref="#PWR?"  Part="1" 
+F 0 "#PWR?" H 7100 2250 50  0001 C CNN
+F 1 "GND" V 7105 2372 50  0000 R CNN
+F 2 "" H 7100 2500 50  0001 C CNN
+F 3 "" H 7100 2500 50  0001 C CNN
+	1    7100 2500
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5F4FB158
+P 5900 2800
+AR Path="/5F4C6CE4/5F4FB158" Ref="#PWR?"  Part="1" 
+AR Path="/5F4C6BF4/5F4FB158" Ref="#PWR?"  Part="1" 
+F 0 "#PWR?" H 5900 2550 50  0001 C CNN
+F 1 "GND" V 5905 2672 50  0000 R CNN
+F 2 "" H 5900 2800 50  0001 C CNN
+F 3 "" H 5900 2800 50  0001 C CNN
+	1    5900 2800
+	0    1    1    0   
+$EndComp
+$Comp
+L S2B-PH-K-S_LF__SN_:S2B-PH-K-S(LF)(SN) J8
+U 1 1 5F501142
+P 9800 3800
+F 0 "J8" H 10030 3841 50  0000 L CNN
+F 1 "Power supply" H 10030 3750 50  0000 L CNN
+F 2 "JST_S2B-PH-K-S(LF)(SN)" H 9800 3800 50  0001 L BNN
+F 3 "None" H 9800 3800 50  0001 L BNN
+F 4 "S2B-PH-K-S-LF-SN" H 10030 3659 50  0000 L CNN "Name"
+F 5 "JST" H 9800 3800 50  0001 L BNN "Manufacturer"
+	1    9800 3800
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5F501D12
+P 9250 4050
+AR Path="/5F4C6CE4/5F501D12" Ref="#PWR?"  Part="1" 
+AR Path="/5F4C6BF4/5F501D12" Ref="#PWR?"  Part="1" 
+F 0 "#PWR?" H 9250 3800 50  0001 C CNN
+F 1 "GND" H 9255 3877 50  0000 C CNN
+F 2 "" H 9250 4050 50  0001 C CNN
+F 3 "" H 9250 4050 50  0001 C CNN
+	1    9250 4050
+	1    0    0    -1  
+$EndComp
+Text GLabel 9150 3800 0    50   Input ~ 0
+VCC
+Wire Wire Line
+	9150 3800 9400 3800
+Wire Wire Line
+	9250 4050 9250 3900
+Wire Wire Line
+	9250 3900 9400 3900
+$Comp
+L Device:CP1 C?
+U 1 1 5F50495C
+P 7400 2850
+AR Path="/5F455032/5F50495C" Ref="C?"  Part="1" 
+AR Path="/5F4C6BF4/5F50495C" Ref="C13"  Part="1" 
+F 0 "C13" H 7515 2896 50  0000 L CNN
+F 1 "100uF" H 7515 2805 50  0000 L CNN
+F 2 "Capacitor_SMD:CP_Elec_6.3x7.7" H 7400 2850 50  0001 C CNN
+F 3 "~" H 7400 2850 50  0001 C CNN
+F 4 "EDK106M063A9GAA" H 7400 2850 50  0001 C CNN "Name"
+F 5 "Kemet" H 7400 2850 50  0001 C CNN "Manufacturer"
+	1    7400 2850
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5F50682F
+P 7400 3000
+AR Path="/5F4C6CE4/5F50682F" Ref="#PWR?"  Part="1" 
+AR Path="/5F4C6BF4/5F50682F" Ref="#PWR?"  Part="1" 
+F 0 "#PWR?" H 7400 2750 50  0001 C CNN
+F 1 "GND" H 7405 2827 50  0000 C CNN
+F 2 "" H 7400 3000 50  0001 C CNN
+F 3 "" H 7400 3000 50  0001 C CNN
+	1    7400 3000
+	1    0    0    -1  
+$EndComp
+$Comp
+L ASMB-KTF0-0A306:ASMB-KTF0-0A306 LED1
+U 1 1 5F50721B
+P 2450 4450
+F 0 "LED1" H 3400 4715 50  0000 C CNN
+F 1 "ASMB-KTF0-0A306" H 3400 4624 50  0000 C CNN
+F 2 "MK2Library:ASMBKTF00A306" H 4200 4550 50  0001 L CNN
+F 3 "https://componentsearchengine.com/Datasheets/1/ASMB-KTF0-0A306.pdf" H 4200 4450 50  0001 L CNN
+F 4 "ASMB-KTF0-0A306" H 2450 4450 50  0001 C CNN "Name"
+F 5 "Avago Technologies" H 4200 3950 50  0001 L CNN "Manufacturer"
+F 6 "Standard LEDs - SMD 2220 PLCC4 Tricolor" H 4200 4350 50  0001 L CNN "Description"
+F 7 "2.1" H 4200 4250 50  0001 L CNN "Height"
+F 8 "630-ASMB-KTF0-0A306" H 4200 4150 50  0001 L CNN "Mouser Part Number"
+F 9 "https://www.mouser.co.uk/ProductDetail/Broadcom-Avago/ASMB-KTF0-0A306?qs=j%252B1pi9TdxUYIaJsf%252B0lh6A%3D%3D" H 4200 4050 50  0001 L CNN "Mouser Price/Stock"
+F 10 "ASMB-KTF0-0A306" H 4200 3850 50  0001 L CNN "Manufacturer_Part_Number"
+	1    2450 4450
+	1    0    0    -1  
+$EndComp
+$Comp
+L ASMB-KTF0-0A306:ASMB-KTF0-0A306 LED2
+U 1 1 5F508AAD
+P 2450 5750
+F 0 "LED2" H 3400 6015 50  0000 C CNN
+F 1 "ASMB-KTF0-0A306" H 3400 5924 50  0000 C CNN
+F 2 "MK2Library:ASMBKTF00A306" H 4200 5850 50  0001 L CNN
+F 3 "https://componentsearchengine.com/Datasheets/1/ASMB-KTF0-0A306.pdf" H 4200 5750 50  0001 L CNN
+F 4 "ASMB-KTF0-0A306" H 2450 5750 50  0001 C CNN "Name"
+F 5 "Avago Technologies" H 4200 5250 50  0001 L CNN "Manufacturer"
+F 6 "Standard LEDs - SMD 2220 PLCC4 Tricolor" H 4200 5650 50  0001 L CNN "Description"
+F 7 "2.1" H 4200 5550 50  0001 L CNN "Height"
+F 8 "630-ASMB-KTF0-0A306" H 4200 5450 50  0001 L CNN "Mouser Part Number"
+F 9 "https://www.mouser.co.uk/ProductDetail/Broadcom-Avago/ASMB-KTF0-0A306?qs=j%252B1pi9TdxUYIaJsf%252B0lh6A%3D%3D" H 4200 5350 50  0001 L CNN "Mouser Price/Stock"
+F 10 "ASMB-KTF0-0A306" H 4200 5150 50  0001 L CNN "Manufacturer_Part_Number"
+	1    2450 5750
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5F50909E
+P 4350 6200
+AR Path="/5F4C6CE4/5F50909E" Ref="#PWR?"  Part="1" 
+AR Path="/5F4C6BF4/5F50909E" Ref="#PWR?"  Part="1" 
+F 0 "#PWR?" H 4350 5950 50  0001 C CNN
+F 1 "GND" H 4355 6027 50  0000 C CNN
+F 2 "" H 4350 6200 50  0001 C CNN
+F 3 "" H 4350 6200 50  0001 C CNN
+	1    4350 6200
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 5F50B0DE
+P 4650 5900
+AR Path="/5F475AB3/5F50B0DE" Ref="R?"  Part="1" 
+AR Path="/5F4C6BF4/5F50B0DE" Ref="R12"  Part="1" 
+F 0 "R12" H 4580 5854 50  0000 R CNN
+F 1 "86.6" H 4580 5945 50  0000 R CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 4580 5900 50  0001 C CNN
+F 3 "~" H 4650 5900 50  0001 C CNN
+	1    4650 5900
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 5F50DB26
+P 4650 4600
+AR Path="/5F475AB3/5F50DB26" Ref="R?"  Part="1" 
+AR Path="/5F4C6BF4/5F50DB26" Ref="R9"  Part="1" 
+F 0 "R9" H 4580 4554 50  0000 R CNN
+F 1 "86.6" H 4580 4645 50  0000 R CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 4580 4600 50  0001 C CNN
+F 3 "~" H 4650 4600 50  0001 C CNN
+	1    4650 4600
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 5F50DFA0
+P 2150 6000
+AR Path="/5F475AB3/5F50DFA0" Ref="R?"  Part="1" 
+AR Path="/5F4C6BF4/5F50DFA0" Ref="R14"  Part="1" 
+F 0 "R14" H 2080 5954 50  0000 R CNN
+F 1 "45" H 2080 6045 50  0000 R CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 2080 6000 50  0001 C CNN
+F 3 "~" H 2150 6000 50  0001 C CNN
+	1    2150 6000
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 5F50E3DB
+P 1750 5900
+AR Path="/5F475AB3/5F50E3DB" Ref="R?"  Part="1" 
+AR Path="/5F4C6BF4/5F50E3DB" Ref="R13"  Part="1" 
+F 0 "R13" H 1680 5854 50  0000 R CNN
+F 1 "24" H 1680 5945 50  0000 R CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 1680 5900 50  0001 C CNN
+F 3 "~" H 1750 5900 50  0001 C CNN
+	1    1750 5900
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 5F5235C7
+P 2150 4700
+AR Path="/5F475AB3/5F5235C7" Ref="R?"  Part="1" 
+AR Path="/5F4C6BF4/5F5235C7" Ref="R11"  Part="1" 
+F 0 "R11" H 2080 4654 50  0000 R CNN
+F 1 "45" H 2080 4745 50  0000 R CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 2080 4700 50  0001 C CNN
+F 3 "~" H 2150 4700 50  0001 C CNN
+	1    2150 4700
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5F5266AF
+P 4350 4950
+AR Path="/5F4C6CE4/5F5266AF" Ref="#PWR?"  Part="1" 
+AR Path="/5F4C6BF4/5F5266AF" Ref="#PWR?"  Part="1" 
+F 0 "#PWR?" H 4350 4700 50  0001 C CNN
+F 1 "GND" H 4355 4777 50  0000 C CNN
+F 2 "" H 4350 4950 50  0001 C CNN
+F 3 "" H 4350 4950 50  0001 C CNN
+	1    4350 4950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4350 4450 4650 4450
+Wire Wire Line
+	4650 4750 4650 4950
+Wire Wire Line
+	2150 4850 2150 4950
+Wire Wire Line
+	2150 4550 2450 4550
+Wire Wire Line
+	1750 4450 2450 4450
+Wire Wire Line
+	1750 4750 1750 4950
+Wire Wire Line
+	4350 4550 4350 4950
+Wire Wire Line
+	4350 5750 4650 5750
+Wire Wire Line
+	4350 5850 4350 6200
+Wire Wire Line
+	2150 6150 2150 6200
+Wire Wire Line
+	1750 6050 1750 6200
+Wire Wire Line
+	1750 5750 2450 5750
+Wire Wire Line
+	2150 5850 2450 5850
+$Comp
+L Device:R R?
+U 1 1 5F52314D
+P 1750 4600
+AR Path="/5F475AB3/5F52314D" Ref="R?"  Part="1" 
+AR Path="/5F4C6BF4/5F52314D" Ref="R10"  Part="1" 
+F 0 "R10" H 1680 4554 50  0000 R CNN
+F 1 "24" H 1680 4645 50  0000 R CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 1680 4600 50  0001 C CNN
+F 3 "~" H 1750 4600 50  0001 C CNN
+	1    1750 4600
+	1    0    0    -1  
+$EndComp
+Text GLabel 4650 4950 3    50   Input ~ 0
+LED1-R
+Text GLabel 4650 6250 3    50   Input ~ 0
+LED2-R
+Text GLabel 1750 4950 3    50   Input ~ 0
+LED1-G
+Text GLabel 2150 4950 3    50   Input ~ 0
+LED1-B
+Text GLabel 1750 6200 3    50   Input ~ 0
+LED2-G
+Text GLabel 2150 6200 3    50   Input ~ 0
+LED2-B
+Wire Wire Line
+	4650 6250 4650 6050
+$EndSCHEMATC

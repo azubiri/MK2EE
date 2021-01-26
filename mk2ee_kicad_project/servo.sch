@@ -1,0 +1,194 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 7 7
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Regulator_Switching:TSR_1-2465 U?
+U 1 1 5FB1F5AD
+P 5350 3550
+F 0 "U?" H 5350 3917 50  0000 C CNN
+F 1 "TSR_1-2465" H 5350 3826 50  0000 C CNN
+F 2 "Converter_DCDC:Converter_DCDC_TRACO_TSR-1_THT" H 5350 3400 50  0001 L CIN
+F 3 "http://www.tracopower.com/products/tsr1.pdf" H 5350 3550 50  0001 C CNN
+	1    5350 3550
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5FB20B84
+P 4600 4100
+AR Path="/5F455032/5FB20B84" Ref="#PWR?"  Part="1" 
+AR Path="/5FB1EC6D/5FB20B84" Ref="#PWR?"  Part="1" 
+F 0 "#PWR?" H 4600 3850 50  0001 C CNN
+F 1 "GND" H 4605 3927 50  0000 C CNN
+F 2 "" H 4600 4100 50  0001 C CNN
+F 3 "" H 4600 4100 50  0001 C CNN
+	1    4600 4100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4600 3450 4600 3650
+Wire Wire Line
+	4600 3950 4600 4100
+$Comp
+L Device:CP1 C?
+U 1 1 5FB20B8E
+P 4600 3800
+AR Path="/5F455032/5FB20B8E" Ref="C?"  Part="1" 
+AR Path="/5FB1EC6D/5FB20B8E" Ref="C?"  Part="1" 
+F 0 "C?" H 4715 3846 50  0000 L CNN
+F 1 "10uF" H 4715 3755 50  0000 L CNN
+F 2 "Capacitor_SMD:CP_Elec_6.3x5.8" H 4600 3800 50  0001 C CNN
+F 3 "~" H 4600 3800 50  0001 C CNN
+F 4 "EDK106M063A9GAA" H 4600 3800 50  0001 C CNN "Name"
+F 5 "Kemet" H 4600 3800 50  0001 C CNN "Manufacturer"
+	1    4600 3800
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 5FB211F1
+P 6150 4100
+AR Path="/5F455032/5FB211F1" Ref="#PWR?"  Part="1" 
+AR Path="/5FB1EC6D/5FB211F1" Ref="#PWR?"  Part="1" 
+F 0 "#PWR?" H 6150 3850 50  0001 C CNN
+F 1 "GND" H 6155 3927 50  0000 C CNN
+F 2 "" H 6150 4100 50  0001 C CNN
+F 3 "" H 6150 4100 50  0001 C CNN
+	1    6150 4100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6150 3450 6150 3650
+Wire Wire Line
+	6150 3950 6150 4100
+$Comp
+L Device:CP1 C?
+U 1 1 5FB211FB
+P 6150 3800
+AR Path="/5F455032/5FB211FB" Ref="C?"  Part="1" 
+AR Path="/5FB1EC6D/5FB211FB" Ref="C?"  Part="1" 
+F 0 "C?" H 6265 3846 50  0000 L CNN
+F 1 "10uF" H 6265 3755 50  0000 L CNN
+F 2 "Capacitor_SMD:CP_Elec_6.3x5.8" H 6150 3800 50  0001 C CNN
+F 3 "~" H 6150 3800 50  0001 C CNN
+F 4 "EDK106M063A9GAA" H 6150 3800 50  0001 C CNN "Name"
+F 5 "Kemet" H 6150 3800 50  0001 C CNN "Manufacturer"
+	1    6150 3800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4600 3450 4950 3450
+Wire Wire Line
+	5750 3450 6150 3450
+Wire Wire Line
+	6150 3450 6650 3450
+Connection ~ 6150 3450
+$Comp
+L MINISMDC110F_16-2:MINISMDC110F_16-2 F?
+U 1 1 5FB2262B
+P 4050 3450
+F 0 "F?" H 4000 3775 50  0000 C CNN
+F 1 "Polyfuse" H 4000 3684 50  0000 C CNN
+F 2 "MK2Library:MINISMDC110" H 4050 3450 50  0001 L BNN
+F 3 "" H 4050 3450 50  0001 C CNN
+F 4 "MINISMDC110F/24-2 " H 4000 3593 50  0000 C CNN "Name"
+F 5 "Littlefuse" H 4050 3450 50  0001 C CNN "Manufacturer"
+	1    4050 3450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4250 3450 4600 3450
+Connection ~ 4600 3450
+Wire Wire Line
+	3750 3450 3250 3450
+Wire Wire Line
+	3250 3450 3250 3150
+$Comp
+L Connector:Conn_01x03_Male J?
+U 1 1 5FB24AF1
+P 9150 3000
+F 0 "J?" H 9122 2932 50  0000 R CNN
+F 1 "Conn_01x03_Male" H 9122 3023 50  0000 R CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical" H 9150 3000 50  0001 C CNN
+F 3 "~" H 9150 3000 50  0001 C CNN
+	1    9150 3000
+	-1   0    0    1   
+$EndComp
+$Comp
+L Connector:Conn_01x03_Male J?
+U 1 1 5FB25D81
+P 9150 3700
+F 0 "J?" H 9122 3632 50  0000 R CNN
+F 1 "Conn_01x03_Male" H 9122 3723 50  0000 R CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x03_P2.54mm_Vertical" H 9150 3700 50  0001 C CNN
+F 3 "~" H 9150 3700 50  0001 C CNN
+	1    9150 3700
+	-1   0    0    1   
+$EndComp
+Text GLabel 8550 2900 0    50   Output ~ 0
+VM5
+Text GLabel 8550 3000 0    50   Output ~ 0
+PWM5
+$Comp
+L power:GND #PWR?
+U 1 1 5FB270B4
+P 8500 3200
+AR Path="/5F455032/5FB270B4" Ref="#PWR?"  Part="1" 
+AR Path="/5FB1EC6D/5FB270B4" Ref="#PWR?"  Part="1" 
+F 0 "#PWR?" H 8500 2950 50  0001 C CNN
+F 1 "GND" H 8505 3027 50  0000 C CNN
+F 2 "" H 8500 3200 50  0001 C CNN
+F 3 "" H 8500 3200 50  0001 C CNN
+	1    8500 3200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8550 2900 8950 2900
+Wire Wire Line
+	8550 3000 8950 3000
+Wire Wire Line
+	8500 3200 8500 3100
+Wire Wire Line
+	8500 3100 8950 3100
+Text GLabel 8550 3600 0    50   Input ~ 0
+VCC6v5
+Text GLabel 8550 3700 0    50   Input ~ 0
+PWM5
+$Comp
+L power:GND #PWR?
+U 1 1 5FB28283
+P 8500 3900
+AR Path="/5F455032/5FB28283" Ref="#PWR?"  Part="1" 
+AR Path="/5FB1EC6D/5FB28283" Ref="#PWR?"  Part="1" 
+F 0 "#PWR?" H 8500 3650 50  0001 C CNN
+F 1 "GND" H 8505 3727 50  0000 C CNN
+F 2 "" H 8500 3900 50  0001 C CNN
+F 3 "" H 8500 3900 50  0001 C CNN
+	1    8500 3900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	8550 3600 8950 3600
+Wire Wire Line
+	8550 3700 8950 3700
+Wire Wire Line
+	8500 3900 8500 3800
+Wire Wire Line
+	8500 3800 8950 3800
+Text GLabel 6650 3450 2    50   Output ~ 0
+VCC6v5
+Text GLabel 3250 3150 1    50   Input ~ 0
+VM5
+$EndSCHEMATC

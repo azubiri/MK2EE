@@ -1,0 +1,539 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 4 5
+Title "Endoder1 - PCB3"
+Date "2020-09-03"
+Rev "1"
+Comp "ETSETB/UPC"
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+Text GLabel 3950 1900 2    50   Output ~ 0
+CSn3
+Text GLabel 3950 2000 2    50   Output ~ 0
+LED1-R3
+Text GLabel 3950 2100 2    50   Output ~ 0
+LED1-G3
+Text GLabel 3950 2200 2    50   Output ~ 0
+LED1-B3
+Text GLabel 3950 2300 2    50   Output ~ 0
+LED2-R3
+Text GLabel 3950 2400 2    50   Output ~ 0
+LED2-G3
+NoConn ~ 3700 2600
+Wire Wire Line
+	3700 1900 3950 1900
+Wire Wire Line
+	3700 2000 3950 2000
+Wire Wire Line
+	3700 2100 3950 2100
+Wire Wire Line
+	3700 2200 3950 2200
+Wire Wire Line
+	3700 2300 3950 2300
+Wire Wire Line
+	3700 2400 3950 2400
+Text GLabel 9150 2000 0    50   Output ~ 0
+CLKEn3
+Text GLabel 9150 1900 0    50   Input ~ 0
+MISO3
+Text GLabel 9150 1800 0    50   Output ~ 0
+SH-CLKEn3
+Text GLabel 9150 2100 0    50   Output ~ 0
+SerialDataInEn3
+Text GLabel 9150 2200 0    50   Output ~ 0
+PO-CLKEn3
+Wire Wire Line
+	9150 1800 9400 1800
+Wire Wire Line
+	9150 1900 9400 1900
+Wire Wire Line
+	9150 2000 9400 2000
+Wire Wire Line
+	9150 2100 9400 2100
+Wire Wire Line
+	9150 2200 9400 2200
+Wire Wire Line
+	9150 2650 9400 2650
+Wire Wire Line
+	9150 2750 9400 2750
+Wire Wire Line
+	9150 2850 9400 2850
+Wire Wire Line
+	9150 2950 9400 2950
+Wire Wire Line
+	9150 3050 9400 3050
+Text GLabel 2250 1300 0    50   Input ~ 0
+VCCD3v3
+Text GLabel 2650 2100 0    50   Input ~ 0
+SH-CLKEn3
+Text GLabel 2650 2400 0    50   Input ~ 0
+PO-CLKEn3
+Wire Wire Line
+	2650 2100 2900 2100
+Wire Wire Line
+	2650 2400 2900 2400
+NoConn ~ 1900 2600
+Text GLabel 3950 2800 2    50   Output ~ 0
+SerialDataOutEn3
+Text GLabel 2650 1900 0    50   Input ~ 0
+SerialDataInEn3
+Wire Wire Line
+	3950 2800 3700 2800
+Wire Wire Line
+	2650 1900 2900 1900
+Text GLabel 3950 2500 2    50   Output ~ 0
+LED2-B3
+Wire Wire Line
+	3700 2500 3950 2500
+Text GLabel 9150 2850 0    50   Input ~ 0
+CLKEn3
+Text GLabel 9150 2750 0    50   Output ~ 0
+MISO3
+Text GLabel 9150 2650 0    50   Input ~ 0
+SH-CLKEn3
+Text GLabel 9150 2950 0    50   Input ~ 0
+SerialDataOutEn3
+Text GLabel 9150 3050 0    50   Input ~ 0
+PO-CLKEn3
+$Comp
+L AS5047D-ATSM:AS5047D-ATSM U8
+U 1 1 5F504AB2
+P 5900 2150
+AR Path="/5F4C6CE4/5F504AB2" Ref="U8"  Part="1" 
+AR Path="/5F4C6BF4/5F504AB2" Ref="IC?"  Part="1" 
+F 0 "U8" H 6500 2415 50  0000 C CNN
+F 1 "AS5047D-ATSM" H 6500 2324 50  0000 C CNN
+F 2 "MK2Library:AS5047D-ATSM" H 6950 2250 50  0001 L CNN
+F 3 "http://ams.com/eng/content/download/595083/1609657/320155" H 6950 2150 50  0001 L CNN
+F 4 "AS5047D-ATSM" H 5900 2150 50  0001 C CNN "Name"
+F 5 "ams" H 6950 1650 50  0001 L CNN "Manufacturer"
+F 6 "ams AS5047D-ATSM Hall Effect Sensor 14-Pin TSSOP, 3  3.6 V, 4.5  5.5 V" H 6950 2050 50  0001 L CNN "Description"
+F 7 "1.2" H 6950 1950 50  0001 L CNN "Height"
+F 8 "985-AS5047D-ATSM" H 6950 1850 50  0001 L CNN "Mouser Part Number"
+F 9 "https://www.mouser.co.uk/ProductDetail/ams/AS5047D-ATSM?qs=qEcPHXRbv51jEdbehV7Mjw%3D%3D" H 6950 1750 50  0001 L CNN "Mouser Price/Stock"
+F 10 "AS5047D-ATSM" H 6950 1550 50  0001 L CNN "Manufacturer_Part_Number"
+	1    5900 2150
+	1    0    0    -1  
+$EndComp
+NoConn ~ 7100 2150
+NoConn ~ 7100 2550
+NoConn ~ 7100 2650
+NoConn ~ 7100 2750
+NoConn ~ 5900 2650
+NoConn ~ 5900 2750
+Text GLabel 5550 2150 0    50   Input ~ 0
+CSn3
+Text GLabel 5550 2250 0    50   Input ~ 0
+CLKEn3
+Text GLabel 5550 2350 0    50   Output ~ 0
+MISO3
+Text GLabel 7750 2450 2    50   Input ~ 0
+VCC3
+Wire Wire Line
+	5550 2150 5900 2150
+Wire Wire Line
+	5550 2250 5900 2250
+Wire Wire Line
+	5550 2350 5900 2350
+Wire Wire Line
+	5550 2450 5900 2450
+Wire Wire Line
+	7100 2450 7400 2450
+Wire Wire Line
+	7100 2350 7400 2350
+Wire Wire Line
+	7400 2350 7400 2450
+Connection ~ 7400 2450
+Wire Wire Line
+	7400 2450 7750 2450
+$Comp
+L power:GND #PWR0124
+U 1 1 5F504ACC
+P 7100 2250
+AR Path="/5F4C6CE4/5F504ACC" Ref="#PWR0124"  Part="1" 
+AR Path="/5F4C6BF4/5F504ACC" Ref="#PWR?"  Part="1" 
+F 0 "#PWR0124" H 7100 2000 50  0001 C CNN
+F 1 "GND" V 7105 2122 50  0000 R CNN
+F 2 "" H 7100 2250 50  0001 C CNN
+F 3 "" H 7100 2250 50  0001 C CNN
+	1    7100 2250
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:GND #PWR0125
+U 1 1 5F504AD2
+P 5900 2550
+AR Path="/5F4C6CE4/5F504AD2" Ref="#PWR0125"  Part="1" 
+AR Path="/5F4C6BF4/5F504AD2" Ref="#PWR?"  Part="1" 
+F 0 "#PWR0125" H 5900 2300 50  0001 C CNN
+F 1 "GND" V 5905 2422 50  0000 R CNN
+F 2 "" H 5900 2550 50  0001 C CNN
+F 3 "" H 5900 2550 50  0001 C CNN
+	1    5900 2550
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:CP1 C?
+U 1 1 5F504AEC
+P 7400 2600
+AR Path="/5F455032/5F504AEC" Ref="C?"  Part="1" 
+AR Path="/5F4C6BF4/5F504AEC" Ref="C?"  Part="1" 
+AR Path="/5F4C6CE4/5F504AEC" Ref="C19"  Part="1" 
+F 0 "C19" H 7515 2646 50  0000 L CNN
+F 1 "100nF" H 7515 2555 50  0000 L CNN
+F 2 "Capacitor_SMD:CP_Elec_6.3x7.7" H 7400 2600 50  0001 C CNN
+F 3 "~" H 7400 2600 50  0001 C CNN
+F 4 "EDK106M063A9GAA" H 7400 2600 50  0001 C CNN "Name"
+F 5 "Kemet" H 7400 2600 50  0001 C CNN "Manufacturer"
+	1    7400 2600
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0126
+U 1 1 5F504AF2
+P 7400 2750
+AR Path="/5F4C6CE4/5F504AF2" Ref="#PWR0126"  Part="1" 
+AR Path="/5F4C6BF4/5F504AF2" Ref="#PWR?"  Part="1" 
+F 0 "#PWR0126" H 7400 2500 50  0001 C CNN
+F 1 "GND" H 7405 2577 50  0000 C CNN
+F 2 "" H 7400 2750 50  0001 C CNN
+F 3 "" H 7400 2750 50  0001 C CNN
+	1    7400 2750
+	1    0    0    -1  
+$EndComp
+$Comp
+L ASMB-KTF0-0A306:ASMB-KTF0-0A306 LED?
+U 1 1 5F504AFF
+P 2450 4200
+AR Path="/5F4C6BF4/5F504AFF" Ref="LED?"  Part="1" 
+AR Path="/5F4C6CE4/5F504AFF" Ref="LED1"  Part="1" 
+F 0 "LED1" H 3400 4465 50  0000 C CNN
+F 1 "ASMB-KTF0-0A306" H 3400 4374 50  0000 C CNN
+F 2 "MK2Library:ASMBKTF00A306" H 4200 4300 50  0001 L CNN
+F 3 "https://componentsearchengine.com/Datasheets/1/ASMB-KTF0-0A306.pdf" H 4200 4200 50  0001 L CNN
+F 4 "ASMB-KTF0-0A306" H 2450 4200 50  0001 C CNN "Name"
+F 5 "Avago Technologies" H 4200 3700 50  0001 L CNN "Manufacturer"
+F 6 "Standard LEDs - SMD 2220 PLCC4 Tricolor" H 4200 4100 50  0001 L CNN "Description"
+F 7 "2.1" H 4200 4000 50  0001 L CNN "Height"
+F 8 "630-ASMB-KTF0-0A306" H 4200 3900 50  0001 L CNN "Mouser Part Number"
+F 9 "https://www.mouser.co.uk/ProductDetail/Broadcom-Avago/ASMB-KTF0-0A306?qs=j%252B1pi9TdxUYIaJsf%252B0lh6A%3D%3D" H 4200 3800 50  0001 L CNN "Mouser Price/Stock"
+F 10 "ASMB-KTF0-0A306" H 4200 3600 50  0001 L CNN "Manufacturer_Part_Number"
+	1    2450 4200
+	1    0    0    -1  
+$EndComp
+$Comp
+L ASMB-KTF0-0A306:ASMB-KTF0-0A306 LED?
+U 1 1 5F504B0C
+P 2450 5500
+AR Path="/5F4C6BF4/5F504B0C" Ref="LED?"  Part="1" 
+AR Path="/5F4C6CE4/5F504B0C" Ref="LED2"  Part="1" 
+F 0 "LED2" H 3400 5765 50  0000 C CNN
+F 1 "ASMB-KTF0-0A306" H 3400 5674 50  0000 C CNN
+F 2 "MK2Library:ASMBKTF00A306" H 4200 5600 50  0001 L CNN
+F 3 "https://componentsearchengine.com/Datasheets/1/ASMB-KTF0-0A306.pdf" H 4200 5500 50  0001 L CNN
+F 4 "ASMB-KTF0-0A306" H 2450 5500 50  0001 C CNN "Name"
+F 5 "Avago Technologies" H 4200 5000 50  0001 L CNN "Manufacturer"
+F 6 "Standard LEDs - SMD 2220 PLCC4 Tricolor" H 4200 5400 50  0001 L CNN "Description"
+F 7 "2.1" H 4200 5300 50  0001 L CNN "Height"
+F 8 "630-ASMB-KTF0-0A306" H 4200 5200 50  0001 L CNN "Mouser Part Number"
+F 9 "https://www.mouser.co.uk/ProductDetail/Broadcom-Avago/ASMB-KTF0-0A306?qs=j%252B1pi9TdxUYIaJsf%252B0lh6A%3D%3D" H 4200 5100 50  0001 L CNN "Mouser Price/Stock"
+F 10 "ASMB-KTF0-0A306" H 4200 4900 50  0001 L CNN "Manufacturer_Part_Number"
+	1    2450 5500
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0127
+U 1 1 5F504B12
+P 4350 5950
+AR Path="/5F4C6CE4/5F504B12" Ref="#PWR0127"  Part="1" 
+AR Path="/5F4C6BF4/5F504B12" Ref="#PWR?"  Part="1" 
+F 0 "#PWR0127" H 4350 5700 50  0001 C CNN
+F 1 "GND" H 4355 5777 50  0000 C CNN
+F 2 "" H 4350 5950 50  0001 C CNN
+F 3 "" H 4350 5950 50  0001 C CNN
+	1    4350 5950
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 5F504B18
+P 4650 5650
+AR Path="/5F475AB3/5F504B18" Ref="R?"  Part="1" 
+AR Path="/5F4C6BF4/5F504B18" Ref="R?"  Part="1" 
+AR Path="/5F4C6CE4/5F504B18" Ref="R14"  Part="1" 
+F 0 "R14" H 4580 5604 50  0000 R CNN
+F 1 "86.6" H 4580 5695 50  0000 R CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 4580 5650 50  0001 C CNN
+F 3 "~" H 4650 5650 50  0001 C CNN
+	1    4650 5650
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 5F504B1E
+P 4650 4350
+AR Path="/5F475AB3/5F504B1E" Ref="R?"  Part="1" 
+AR Path="/5F4C6BF4/5F504B1E" Ref="R?"  Part="1" 
+AR Path="/5F4C6CE4/5F504B1E" Ref="R11"  Part="1" 
+F 0 "R11" H 4580 4304 50  0000 R CNN
+F 1 "86.6" H 4580 4395 50  0000 R CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 4580 4350 50  0001 C CNN
+F 3 "~" H 4650 4350 50  0001 C CNN
+	1    4650 4350
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 5F504B24
+P 2150 5750
+AR Path="/5F475AB3/5F504B24" Ref="R?"  Part="1" 
+AR Path="/5F4C6BF4/5F504B24" Ref="R?"  Part="1" 
+AR Path="/5F4C6CE4/5F504B24" Ref="R13"  Part="1" 
+F 0 "R13" H 2080 5704 50  0000 R CNN
+F 1 "45" H 2080 5795 50  0000 R CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 2080 5750 50  0001 C CNN
+F 3 "~" H 2150 5750 50  0001 C CNN
+	1    2150 5750
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 5F504B2A
+P 1750 5650
+AR Path="/5F475AB3/5F504B2A" Ref="R?"  Part="1" 
+AR Path="/5F4C6BF4/5F504B2A" Ref="R?"  Part="1" 
+AR Path="/5F4C6CE4/5F504B2A" Ref="R12"  Part="1" 
+F 0 "R12" H 1680 5604 50  0000 R CNN
+F 1 "24" H 1680 5695 50  0000 R CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 1680 5650 50  0001 C CNN
+F 3 "~" H 1750 5650 50  0001 C CNN
+	1    1750 5650
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R?
+U 1 1 5F504B30
+P 2150 4450
+AR Path="/5F475AB3/5F504B30" Ref="R?"  Part="1" 
+AR Path="/5F4C6BF4/5F504B30" Ref="R?"  Part="1" 
+AR Path="/5F4C6CE4/5F504B30" Ref="R10"  Part="1" 
+F 0 "R10" H 2080 4404 50  0000 R CNN
+F 1 "45" H 2080 4495 50  0000 R CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 2080 4450 50  0001 C CNN
+F 3 "~" H 2150 4450 50  0001 C CNN
+	1    2150 4450
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0128
+U 1 1 5F504B36
+P 4350 4700
+AR Path="/5F4C6CE4/5F504B36" Ref="#PWR0128"  Part="1" 
+AR Path="/5F4C6BF4/5F504B36" Ref="#PWR?"  Part="1" 
+F 0 "#PWR0128" H 4350 4450 50  0001 C CNN
+F 1 "GND" H 4355 4527 50  0000 C CNN
+F 2 "" H 4350 4700 50  0001 C CNN
+F 3 "" H 4350 4700 50  0001 C CNN
+	1    4350 4700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4350 4200 4650 4200
+Wire Wire Line
+	4650 4500 4650 4700
+Wire Wire Line
+	2150 4600 2150 4700
+Wire Wire Line
+	2150 4300 2450 4300
+Wire Wire Line
+	1750 4200 2450 4200
+Wire Wire Line
+	1750 4500 1750 4700
+Wire Wire Line
+	4350 4300 4350 4700
+Wire Wire Line
+	4350 5500 4650 5500
+Wire Wire Line
+	4350 5600 4350 5950
+Wire Wire Line
+	2150 5900 2150 5950
+Wire Wire Line
+	1750 5800 1750 5950
+Wire Wire Line
+	1750 5500 2450 5500
+Wire Wire Line
+	2150 5600 2450 5600
+$Comp
+L Device:R R?
+U 1 1 5F504B49
+P 1750 4350
+AR Path="/5F475AB3/5F504B49" Ref="R?"  Part="1" 
+AR Path="/5F4C6BF4/5F504B49" Ref="R?"  Part="1" 
+AR Path="/5F4C6CE4/5F504B49" Ref="R9"  Part="1" 
+F 0 "R9" H 1680 4304 50  0000 R CNN
+F 1 "24" H 1680 4395 50  0000 R CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.15x1.40mm_HandSolder" V 1680 4350 50  0001 C CNN
+F 3 "~" H 1750 4350 50  0001 C CNN
+	1    1750 4350
+	1    0    0    -1  
+$EndComp
+Text GLabel 4650 4700 3    50   Input ~ 0
+LED1-R3
+Text GLabel 4650 6000 3    50   Input ~ 0
+LED2-R3
+Text GLabel 1750 4700 3    50   Input ~ 0
+LED1-G3
+Text GLabel 2150 4700 3    50   Input ~ 0
+LED1-B3
+Text GLabel 1750 5950 3    50   Input ~ 0
+LED2-G3
+Text GLabel 2150 5950 3    50   Input ~ 0
+LED2-B3
+Wire Wire Line
+	4650 6000 4650 5800
+$Comp
+L Connector:Conn_01x05_Male J6
+U 1 1 5F5BDA56
+P 9600 2000
+F 0 "J6" H 9572 1887 50  0000 R CNN
+F 1 "Conn_01x05_Male" H 9572 1978 50  0000 R CNN
+F 2 "Connector_Molex:Molex_CLIK-Mate_502443-0570_1x05-1MP_P2.00mm_Vertical" H 9600 2000 50  0001 C CNN
+F 3 "~" H 9600 2000 50  0001 C CNN
+F 4 "CLIK-Mate_502443-0570" H 9572 2069 50  0000 R CNN "Name"
+F 5 "Molex" H 9600 2000 50  0001 C CNN "Manufacturer"
+	1    9600 2000
+	-1   0    0    1   
+$EndComp
+$Comp
+L Connector:Conn_01x05_Male J7
+U 1 1 5F5BE9F2
+P 9600 2850
+F 0 "J7" H 9572 2737 50  0000 R CNN
+F 1 "Conn_01x05_Male" H 9572 2828 50  0000 R CNN
+F 2 "Connector_Molex:Molex_CLIK-Mate_502443-0570_1x05-1MP_P2.00mm_Vertical" H 9600 2850 50  0001 C CNN
+F 3 "~" H 9600 2850 50  0001 C CNN
+F 4 "CLIK-Mate_502443-0570" H 9572 2919 50  0000 R CNN "Name"
+F 5 "Molex" H 9600 2850 50  0001 C CNN "Manufacturer"
+	1    9600 2850
+	-1   0    0    1   
+$EndComp
+$Comp
+L Connector:Conn_01x02_Male J?
+U 1 1 5F5C95E9
+P 9600 3650
+AR Path="/5F475AB3/5F5C95E9" Ref="J?"  Part="1" 
+AR Path="/5F4C6CE4/5F5C95E9" Ref="J8"  Part="1" 
+F 0 "J8" H 9572 3487 50  0000 R CNN
+F 1 "Conn_01x02_Male" H 9572 3578 50  0000 R CNN
+F 2 "Connector_Molex:Molex_CLIK-Mate_502443-0270_1x02-1MP_P2.00mm_Vertical" H 9600 3650 50  0001 C CNN
+F 3 "~" H 9600 3650 50  0001 C CNN
+F 4 "CLIK-Mate_502443-0270" H 9572 3669 50  0000 R CNN "Name"
+F 5 "Molex" H 9600 3650 50  0001 C CNN "Manufacturer"
+	1    9600 3650
+	-1   0    0    1   
+$EndComp
+Text GLabel 9150 3550 0    50   Output ~ 0
+VCCD3v3
+$Comp
+L power:GND #PWR?
+U 1 1 5F5C95F0
+P 9150 3650
+AR Path="/5F475AB3/5F5C95F0" Ref="#PWR?"  Part="1" 
+AR Path="/5F4C6CE4/5F5C95F0" Ref="#PWR0129"  Part="1" 
+F 0 "#PWR0129" H 9150 3400 50  0001 C CNN
+F 1 "GND" H 9155 3477 50  0000 C CNN
+F 2 "" H 9150 3650 50  0001 C CNN
+F 3 "" H 9150 3650 50  0001 C CNN
+	1    9150 3650
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	9150 3550 9400 3550
+Wire Wire Line
+	9150 3650 9400 3650
+$Comp
+L 74xx:74HC595 U7
+U 1 1 5F924F68
+P 3300 2300
+F 0 "U7" H 3300 3081 50  0000 C CNN
+F 1 "74HC595" H 3300 2990 50  0000 C CNN
+F 2 "" H 3300 2300 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/sn74hc595.pdf" H 3300 2300 50  0001 C CNN
+	1    3300 2300
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3300 1300 3300 1700
+$Comp
+L power:GND #PWR?
+U 1 1 5F92D3B3
+P 3300 3000
+AR Path="/5F4C6CE4/5F92D3B3" Ref="#PWR?"  Part="1" 
+AR Path="/5F4C6BF4/5F92D3B3" Ref="#PWR?"  Part="1" 
+F 0 "#PWR?" H 3300 2750 50  0001 C CNN
+F 1 "GND" H 3305 2827 50  0000 C CNN
+F 2 "" H 3300 3000 50  0001 C CNN
+F 3 "" H 3300 3000 50  0001 C CNN
+	1    3300 3000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2900 2500 2800 2500
+Wire Wire Line
+	2800 2500 2800 3000
+Wire Wire Line
+	2800 3000 3300 3000
+Connection ~ 3300 3000
+Wire Wire Line
+	2900 2200 2750 2200
+Wire Wire Line
+	2750 2200 2750 1300
+Connection ~ 2750 1300
+Wire Wire Line
+	2750 1300 3300 1300
+Wire Wire Line
+	2250 1300 2450 1300
+$Comp
+L Device:C C18
+U 1 1 5F941CAA
+P 2450 1450
+F 0 "C18" H 2565 1496 50  0000 L CNN
+F 1 "100nF" H 2565 1405 50  0000 L CNN
+F 2 "" H 2488 1300 50  0001 C CNN
+F 3 "~" H 2450 1450 50  0001 C CNN
+	1    2450 1450
+	1    0    0    -1  
+$EndComp
+Connection ~ 2450 1300
+Wire Wire Line
+	2450 1300 2750 1300
+$Comp
+L power:GND #PWR?
+U 1 1 5F9423EC
+P 2450 1600
+AR Path="/5F4C6CE4/5F9423EC" Ref="#PWR?"  Part="1" 
+AR Path="/5F4C6BF4/5F9423EC" Ref="#PWR?"  Part="1" 
+F 0 "#PWR?" H 2450 1350 50  0001 C CNN
+F 1 "GND" H 2455 1427 50  0000 C CNN
+F 2 "" H 2450 1600 50  0001 C CNN
+F 3 "" H 2450 1600 50  0001 C CNN
+	1    2450 1600
+	1    0    0    -1  
+$EndComp
+Text GLabel 5550 2450 0    50   Input ~ 0
+VCCD3v3
+Text Notes 3200 4850 0    100  ~ 0
+LEDs
+Text Notes 5800 1650 0    100  ~ 0
+Magnetic Encoder
+Text Notes 9150 1500 0    100  ~ 0
+Connectors
+Text Notes 1850 1000 0    100  ~ 0
+Shift Registers with Parallel Output
+$EndSCHEMATC

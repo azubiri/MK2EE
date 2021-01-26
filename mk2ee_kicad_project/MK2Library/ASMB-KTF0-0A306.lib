@@ -1,0 +1,25 @@
+EESchema-LIBRARY Version 2.3
+#encoding utf-8
+#SamacSys ECAD Model ASMB-KTF0-0A306
+#/1176215/310122/2.47/4/4/LED
+DEF ASMB-KTF0-0A306 LED 0 30 Y Y 1 F N
+F0 "LED" 1750 300 50 H V L CNN
+F1 "ASMB-KTF0-0A306" 1750 200 50 H V L CNN
+F2 "ASMBKTF00A306" 1750 100 50 H I L CNN
+F3 "https://componentsearchengine.com/Datasheets/1/ASMB-KTF0-0A306.pdf" 1750 0 50 H I L CNN
+F4 "Standard LEDs - SMD 2220 PLCC4 Tricolor" 1750 -100 50 H I L CNN "Description"
+F5 "2.1" 1750 -200 50 H I L CNN "Height"
+F6 "630-ASMB-KTF0-0A306" 1750 -300 50 H I L CNN "Mouser Part Number"
+F7 "https://www.mouser.co.uk/ProductDetail/Broadcom-Avago/ASMB-KTF0-0A306?qs=j%252B1pi9TdxUYIaJsf%252B0lh6A%3D%3D" 1750 -400 50 H I L CNN "Mouser Price/Stock"
+F8 "Avago Technologies" 1750 -500 50 H I L CNN "Manufacturer_Name"
+F9 "ASMB-KTF0-0A306" 1750 -600 50 H I L CNN "Manufacturer_Part_Number"
+DRAW
+X ANODE 1 1900 -100 200 L 50 50 0 0 P
+X RED_CATHODE 2 1900 0 200 L 50 50 0 0 P
+X GREEN_CATHODE 3 0 0 200 R 50 50 0 0 P
+X BLUE_CATHODE 4 0 -100 200 R 50 50 0 0 P
+P 5 0 1 6 200 100 1700 100 1700 -200 200 -200 200 100 N
+ENDDRAW
+ENDDEF
+#
+#End Library
