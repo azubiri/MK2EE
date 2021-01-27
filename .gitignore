@@ -26,3 +26,11 @@ fp-info-cache
 # Exported BOM files
 *.xml
 *.csv
+
+
+# For Mbed projects that are made in PlatformIO
+/.pio/*
+platformio.ini
+
+# Visual Studio files
+/.vscode/*
