@@ -1,0 +1,36 @@
+// AUTOMATICALLY GENERATED FILE. PLEASE DO NOT MODIFY IT MANUALLY
+
+// PIO Unified Debugger
+//
+// Documentation: https://docs.platformio.org/page/plus/debugging.html
+// Configuration: https://docs.platformio.org/page/projectconf/section_env_debug.html
+
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "platformio-debug",
+            "request": "launch",
+            "name": "PIO Debug",
+            "executable": "p:/TFM/Prototyping/DRV8818_AS5047_SPI/.pio/build/nucleo_f303re/firmware.elf",
+            "projectEnvName": "nucleo_f303re",
+            "toolchainBinDir": "C:/Users/azubc/.platformio/packages/toolchain-gccarmnoneeabi/bin",
+            "svdPath": "C:/Users/azubc/.platformio/platforms/ststm32/misc/svd/STM32F303xE.svd",
+            "preLaunchTask": {
+                "type": "PlatformIO",
+                "task": "Pre-Debug"
+            },
+            "internalConsoleOptions": "openOnSessionStart"
+        },
+        {
+            "type": "platformio-debug",
+            "request": "launch",
+            "name": "PIO Debug (skip Pre-Debug)",
+            "executable": "p:/TFM/Prototyping/DRV8818_AS5047_SPI/.pio/build/nucleo_f303re/firmware.elf",
+            "projectEnvName": "nucleo_f303re",
+            "toolchainBinDir": "C:/Users/azubc/.platformio/packages/toolchain-gccarmnoneeabi/bin",
+            "svdPath": "C:/Users/azubc/.platformio/platforms/ststm32/misc/svd/STM32F303xE.svd",
+            "internalConsoleOptions": "openOnSessionStart"
+        }
+    ]
+}
