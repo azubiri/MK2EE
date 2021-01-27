@@ -1,0 +1,6 @@
+# For Mbed projects that are made in PlatformIO
+/.pio/*
+platformio.ini
+
+# Visual Studio files
+/.vscode/*
