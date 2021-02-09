@@ -9,4 +9,5 @@
   (lib (name ASMB-KTF0-0A306)(type Legacy)(uri ${KIPRJMOD}/MK2Library/ASMB-KTF0-0A306.lib)(options "")(descr ""))
   (lib (name NUCLEO-F411RE)(type Legacy)(uri "P:/TFM/KiCad Projects/MK2EE/MK2EE/MK2Library/NUCLEO-F401RE.lib")(options "")(descr ""))
   (lib (name MK2EE-rescue)(type Legacy)(uri ${KIPRJMOD}/MK2EE-rescue.lib)(options "")(descr ""))
+  (lib (name Switchcraft_-_L712RA)(type Legacy)(uri ${KIPRJMOD}/MK2Library/Switchcraft_-_L712RA.lib)(options "")(descr ""))
 )

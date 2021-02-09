@@ -1,8 +1,8 @@
-(module AS5047D-ATSM (layer F.Cu) (tedit 5F4E5663)
+(module AS5047D-ATSM (layer F.Cu) (tedit 601AAA22)
   (descr AS5047D)
   (tags "Integrated Circuit")
   (attr smd)
-  (fp_text reference IC** (at 0 3.8) (layer F.SilkS)
+  (fp_text reference REF** (at 0 3.8) (layer F.SilkS)
     (effects (font (size 1 1) (thickness 0.15)))
   )
   (fp_text value SOP65P640X120-14N (at 0 -3.8) (layer F.SilkS) hide

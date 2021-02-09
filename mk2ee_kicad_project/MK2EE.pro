@@ -1,4 +1,4 @@
-update=22/11/2020 00:00:23
+update=09/02/2021 16:05:46
 version=1
 last_client=kicad
 [general]
@@ -239,7 +239,7 @@ dPairViaGap=0.25
 [schematic_editor]
 version=1
 PageLayoutDescrFile=
-PlotDirectoryName=P:/TFM/Documentation/images/electronic_design/
+PlotDirectoryName=./
 SubpartIdSeparator=0
 SubpartFirstId=65
 NetFmtName=Pcbnew

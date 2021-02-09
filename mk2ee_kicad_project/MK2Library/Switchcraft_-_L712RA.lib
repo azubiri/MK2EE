@@ -1,0 +1,40 @@
+EESchema-LIBRARY Version 2.4
+#encoding utf-8
+#
+# L712RA
+#
+DEF L712RA J 0 0 Y Y 1 L N
+F0 "J" 0 200 50 H V L CNN
+F1 "L712RA" 0 300 50 H V L CNN
+F2 "Switchcraft-L712RA-*" 0 400 50 H I L CNN
+F3 "http://www.switchcraft.com/Drawings/L712RA_L722RA_L732RA_CD.pdf" 0 500 50 H I L CNN
+F4 "Conn" 0 600 50 H I L CNN "category"
+F5 "CONN PWR JACK 2.5X5.5MM SOLDER" 0 700 50 H I L CNN "digikey description"
+F6 "SC1472-ND" 0 800 50 H I L CNN "digikey part number"
+F7 "CAPAD1016W80L630D240" 0 900 50 H I L CNN "ipc land pattern name"
+F8 "yes" 0 1000 50 H I L CNN "lead free"
+F9 "44b6d1c0e112e6eb" 0 1100 50 H I L CNN "library id"
+F10 "Switchcraft" 0 1200 50 H I L CNN "manufacturer"
+F11 "502-L712RA" 0 1300 50 H I L CNN "mouser part number"
+F12 "CONN_PWR_TH" 0 1400 50 H I L CNN "package"
+F13 "yes" 0 1500 50 H I L CNN "rohs"
+F14 "12V" 0 1600 50 H I L CNN "voltage"
+DRAW
+A -850 0 50 1800 -1 1 1 0 N -900 0 -800 0
+A -650 -600 50 0 1799 1 1 0 N -600 -600 -700 -600
+S -1000 100 -200 -700 1 1 0 f
+P 2 1 1 0 -500 -500 -300 -500 N
+P 2 1 1 0 -400 -600 -500 -500 N
+P 2 1 1 0 -400 -600 -400 -600 N
+P 2 1 1 0 -400 -300 -400 -600 N
+P 2 1 1 0 -300 -500 -400 -600 N
+P 2 1 1 0 -200 -600 -600 -600 N
+P 2 1 1 0 -200 -300 -400 -300 N
+P 2 1 1 0 -200 0 -800 0 N
+X CENTER_PIN 1 -100 0 100 L 40 40 1 1 P
+X SLEEVE 2 -100 -600 100 L 40 40 1 1 P
+X SLEEVE_SHUNT 3 -100 -300 100 L 40 40 1 1 P
+ENDDRAW
+ENDDEF
+#
+#End Library
