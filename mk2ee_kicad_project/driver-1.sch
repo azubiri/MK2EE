@@ -64,19 +64,6 @@ F 5 "MULTICOMP PRO" V 5700 950 50  0001 C CNN "Manufacturer"
 	0    1    1    0   
 $EndComp
 $Comp
-L Device:C C7
-U 1 1 5F478D33
-P 5700 2100
-F 0 "C7" V 5448 2100 50  0000 C CNN
-F 1 "1000pF" V 5539 2100 50  0000 C CNN
-F 2 "Capacitor_SMD:C_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 5738 1950 50  0001 C CNN
-F 3 "~" H 5700 2100 50  0001 C CNN
-F 4 "MC1206B102K500CT" V 5700 2100 50  0001 C CNN "Name"
-F 5 "MULTICOMP PRO" V 5700 2100 50  0001 C CNN "Manufacturer"
-	1    5700 2100
-	0    1    1    0   
-$EndComp
-$Comp
 L Device:R R1
 U 1 1 5F47BCE3
 P 5700 1300
@@ -169,8 +156,6 @@ Wire Wire Line
 Wire Wire Line
 	5850 950  5850 1300
 Wire Wire Line
-	5850 2100 5850 2450
-Wire Wire Line
 	6600 1900 5850 1900
 Wire Wire Line
 	5850 1900 5850 1300
@@ -196,9 +181,6 @@ F 3 "" H 5550 1350 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	6600 2000 5850 2000
-Wire Wire Line
-	5850 2000 5850 2100
-Connection ~ 5850 2100
 $Comp
 L power:GND #PWR0112
 U 1 1 5F4905B5
@@ -1242,4 +1224,22 @@ Text Label 2200 6550 2    50   ~ 0
 pwr9
 Text Label 4250 6550 2    50   ~ 0
 pwr10
+Wire Wire Line
+	5850 2000 5850 2100
+$Comp
+L Device:C C7
+U 1 1 603370C1
+P 5700 2100
+F 0 "C7" V 5448 2100 50  0000 C CNN
+F 1 "1000pF" V 5539 2100 50  0000 C CNN
+F 2 "Capacitor_SMD:C_1206_3216Metric" H 5738 1950 50  0001 C CNN
+F 3 "~" H 5700 2100 50  0001 C CNN
+F 4 "MC1206B102K500CT" V 5700 2100 50  0001 C CNN "Name"
+F 5 "MULTICOMP PRO" V 5700 2100 50  0001 C CNN "Manufacturer"
+	1    5700 2100
+	0    1    1    0   
+$EndComp
+Connection ~ 5850 2100
+Wire Wire Line
+	5850 2100 5850 2450
 $EndSCHEMATC
