@@ -74,18 +74,18 @@ Text GLabel 4300 5200 0    50   Output ~ 0
 SerialDataOutDr1
 Wire Wire Line
 	4300 5200 4650 5200
-Text GLabel 1350 6000 0    50   Output ~ 0
+Text GLabel 4200 6900 0    50   Output ~ 0
 SH-CLKEn1
-Text GLabel 4300 5900 0    50   Output ~ 0
+Text GLabel 4300 6800 0    50   Output ~ 0
 PO-CLKEn1
 Text GLabel 4300 5700 0    50   Input ~ 0
 MISO1
 Wire Wire Line
 	4300 5700 4650 5700
 Wire Wire Line
-	4300 5900 4650 5900
+	4300 6800 4650 6800
 Wire Wire Line
-	1350 6000 1800 6000
+	4200 6900 4650 6900
 Text GLabel 1350 5400 0    50   Output ~ 0
 SerialDataOutEn1
 Wire Wire Line
@@ -119,8 +119,6 @@ NoConn ~ 4650 6300
 NoConn ~ 4650 6400
 NoConn ~ 4650 6600
 NoConn ~ 4650 6700
-NoConn ~ 4650 6800
-NoConn ~ 4650 6900
 NoConn ~ 4650 7000
 NoConn ~ 4650 7100
 NoConn ~ 6050 4500
@@ -140,13 +138,13 @@ NoConn ~ 3400 5100
 NoConn ~ 3400 5300
 NoConn ~ 3400 5400
 Wire Wire Line
-	8850 5900 8600 5900
+	8850 4900 8600 4900
 Wire Wire Line
 	8850 5800 8600 5800
 Wire Wire Line
-	8850 5700 8600 5700
+	8850 4800 8600 4800
 Wire Wire Line
-	8850 5600 8600 5600
+	8850 5900 8600 5900
 Wire Wire Line
 	8850 5500 8600 5500
 Wire Wire Line
@@ -159,43 +157,43 @@ Wire Wire Line
 	8850 5100 8600 5100
 Wire Wire Line
 	8850 5000 8600 5000
-Text GLabel 8850 5200 2    50   Input ~ 0
-MOSI1
+Text GLabel 8850 4800 2    50   Input ~ 0
+CLK1
 Text GLabel 8850 5300 2    50   Output ~ 0
 MISO1
-Text GLabel 8850 5600 2    50   Input ~ 0
+Text GLabel 8850 5700 2    50   Input ~ 0
 SH-CLKEn1
-Text GLabel 8850 5400 2    50   Input ~ 0
+Text GLabel 8850 5100 2    50   Input ~ 0
 SerialDataOutEn1
 Text GLabel 8850 5500 2    50   Input ~ 0
 PO-CLKEn1
-Text GLabel 8850 5800 2    50   Input ~ 0
+Text GLabel 8850 4900 2    50   Input ~ 0
 PO-CLKDr1
-Text GLabel 8850 5900 2    50   Input ~ 0
+Text GLabel 8850 5200 2    50   Input ~ 0
 SH-CLKDr1
-Text GLabel 8850 5000 2    50   Input ~ 0
+Text GLabel 8850 5900 2    50   Input ~ 0
 VCCA3v3
-Text GLabel 8850 5700 2    50   Input ~ 0
+Text GLabel 8850 5400 2    50   Input ~ 0
 SerialDataOutDr1
-Text GLabel 8850 4800 2    50   Input ~ 0
+Text GLabel 8850 5800 2    50   Input ~ 0
 VMA
 Wire Wire Line
-	8850 4800 8600 4800
+	8850 5700 8600 5700
 Wire Wire Line
-	9850 4900 9850 5050
+	9850 5600 9850 5750
 Wire Wire Line
-	8600 4900 9850 4900
+	8600 5600 9850 5600
 $Comp
 L power:GND #PWR?
 U 1 1 5FBF482F
-P 9850 5050
+P 9850 5750
 AR Path="/5F4C637B/5FBF482F" Ref="#PWR?"  Part="1" 
 AR Path="/5F455032/5FBF482F" Ref="#PWR0102"  Part="1" 
-F 0 "#PWR0102" H 9850 4800 50  0001 C CNN
-F 1 "GND" H 9855 4877 50  0000 C CNN
-F 2 "" H 9850 5050 50  0001 C CNN
-F 3 "" H 9850 5050 50  0001 C CNN
-	1    9850 5050
+F 0 "#PWR0102" H 9850 5500 50  0001 C CNN
+F 1 "GND" H 9855 5577 50  0000 C CNN
+F 2 "" H 9850 5750 50  0001 C CNN
+F 3 "" H 9850 5750 50  0001 C CNN
+	1    9850 5750
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -225,7 +223,7 @@ AR Path="/5F4C637B/5FBF4840" Ref="J?"  Part="1"
 AR Path="/5F455032/5FBF4840" Ref="J2"  Part="1" 
 F 0 "J2" H 8508 6071 50  0000 C CNN
 F 1 "Conn_02x6_Male" H 8508 5980 50  0000 C CNN
-F 2 "Connector_PinSocket_2.54mm:PinSocket_2x06_P2.54mm_Horizontal" H 8400 5300 50  0001 C CNN
+F 2 "Connector_IDC:IDC-Header_2x06_P2.54mm_Horizontal" H 8400 5300 50  0001 C CNN
 F 3 "~" H 8400 5300 50  0001 C CNN
 F 4 "T821112A1R100CEU" H 8508 5889 50  0000 C CNN "Name"
 F 5 "AMPHENOL ICC" H 8400 5300 50  0001 C CNN "Manufacturer"
@@ -237,7 +235,7 @@ Wire Wire Line
 	3400 4500 3850 4500
 Text GLabel 3850 4500 2    50   Input ~ 0
 VCCA5V
-Text GLabel 8850 5100 2    50   Input ~ 0
+Text GLabel 8850 5000 2    50   Input ~ 0
 PWM1
 NoConn ~ 4650 6500
 $Comp
@@ -455,7 +453,7 @@ AR Path="/5F455032/5FBF48D2" Ref="TP2"  Part="1"
 AR Path="/5F4C637B/5FBF48D2" Ref="TP?"  Part="1" 
 F 0 "TP2" H 5158 1168 50  0000 L CNN
 F 1 "TestPoint" H 5158 1077 50  0001 L CNN
-F 2 "TestPoint:TestPoint_Pad_D4.0mm" H 5300 1050 50  0001 C CNN
+F 2 "TestPoint:TestPoint_Pad_D1.5mm" H 5300 1050 50  0001 C CNN
 F 3 "~" H 5300 1050 50  0001 C CNN
 	1    5100 1050
 	1    0    0    -1  
@@ -468,7 +466,7 @@ AR Path="/5F455032/5FBF48D8" Ref="TP1"  Part="1"
 AR Path="/5F4C637B/5FBF48D8" Ref="TP?"  Part="1" 
 F 0 "TP1" H 4008 1168 50  0000 L CNN
 F 1 "TestPoint" H 4008 1077 50  0001 L CNN
-F 2 "TestPoint:TestPoint_Pad_D4.0mm" H 4150 1050 50  0001 C CNN
+F 2 "TestPoint:TestPoint_Pad_D1.5mm" H 4150 1050 50  0001 C CNN
 F 3 "~" H 4150 1050 50  0001 C CNN
 	1    3950 1050
 	1    0    0    -1  
@@ -636,7 +634,7 @@ AR Path="/5F455032/5FC0E668" Ref="TP3"  Part="1"
 AR Path="/5F4C637B/5FC0E668" Ref="TP?"  Part="1" 
 F 0 "TP3" H 8258 1168 50  0000 L CNN
 F 1 "TestPoint" H 8258 1077 50  0001 L CNN
-F 2 "TestPoint:TestPoint_Pad_D4.0mm" H 8400 1050 50  0001 C CNN
+F 2 "TestPoint:TestPoint_Pad_D1.5mm" H 8400 1050 50  0001 C CNN
 F 3 "~" H 8400 1050 50  0001 C CNN
 	1    8200 1050
 	1    0    0    -1  
@@ -703,7 +701,7 @@ AR Path="/5F455032/6024378E" Ref="TP4"  Part="1"
 AR Path="/5F4C637B/6024378E" Ref="TP?"  Part="1" 
 F 0 "TP4" H 7558 2618 50  0000 L CNN
 F 1 "TestPoint" H 7558 2527 50  0001 L CNN
-F 2 "TestPoint:TestPoint_Pad_D4.0mm" H 7700 2500 50  0001 C CNN
+F 2 "TestPoint:TestPoint_Pad_D1.5mm" H 7700 2500 50  0001 C CNN
 F 3 "~" H 7700 2500 50  0001 C CNN
 	1    7500 2500
 	1    0    0    -1  
@@ -749,12 +747,14 @@ Text GLabel 1350 5300 0    50   Output ~ 0
 PWM1
 Wire Wire Line
 	1350 5300 1800 5300
-Text GLabel 4300 5500 0    50   Output ~ 0
-MOSI1
-Wire Wire Line
-	4300 5500 4650 5500
 Text Label 7600 1300 2    50   ~ 0
 pwr3
 Text Label 7750 2750 2    50   ~ 0
 pwr4
+Wire Wire Line
+	1450 6000 1800 6000
+Text GLabel 1450 6000 0    50   Output ~ 0
+CLK1
+NoConn ~ 4650 5500
+NoConn ~ 4650 5900
 $EndSCHEMATC

@@ -385,35 +385,31 @@ Text Label 8150 1900 2    50   ~ 0
 $Comp
 L power:GND #PWR0117
 U 1 1 5F4EE14D
-P 9250 4050
-F 0 "#PWR0117" H 9250 3800 50  0001 C CNN
-F 1 "GND" H 9255 3877 50  0000 C CNN
-F 2 "" H 9250 4050 50  0001 C CNN
-F 3 "" H 9250 4050 50  0001 C CNN
-	1    9250 4050
-	0    1    1    0   
+P 9250 3650
+F 0 "#PWR0117" H 9250 3400 50  0001 C CNN
+F 1 "GND" H 9255 3477 50  0000 C CNN
+F 2 "" H 9250 3650 50  0001 C CNN
+F 3 "" H 9250 3650 50  0001 C CNN
+	1    9250 3650
+	-1   0    0    1   
 $EndComp
-Wire Wire Line
-	9250 4150 9400 4150
-Wire Wire Line
-	9250 4050 9500 4050
 Text GLabel 2600 1850 2    50   Output ~ 0
 DIR
-Text GLabel 2600 1950 2    50   Output ~ 0
-USM0
 Text GLabel 2600 2050 2    50   Output ~ 0
+USM0
+Text GLabel 2600 1950 2    50   Output ~ 0
 USM1
-Text GLabel 2600 2150 2    50   Output ~ 0
-STEP
-Text GLabel 2600 2250 2    50   Output ~ 0
-SRn
 Text GLabel 2600 2350 2    50   Output ~ 0
+STEP
+Text GLabel 2600 2150 2    50   Output ~ 0
+SRn
+Text GLabel 2600 2250 2    50   Output ~ 0
 RESETn
-Text GLabel 9250 5400 0    50   Input ~ 0
-SerialDataOutDr2
 Text GLabel 9250 5300 0    50   Input ~ 0
+SerialDataOutDr2
+Text GLabel 9250 5400 0    50   Input ~ 0
 PWM2
-Text GLabel 9250 5200 0    50   Input ~ 0
+Text GLabel 9250 5700 0    50   Input ~ 0
 SH-CLKDr2
 Text GLabel 9250 5500 0    50   Input ~ 0
 PO-CLKDr2
@@ -433,7 +429,7 @@ Text GLabel 2600 2750 2    50   Output ~ 0
 SerialDataOutDr2
 Text GLabel 1300 1850 0    50   Input ~ 0
 SerialDataInDr2
-Text GLabel 9250 5700 0    50   Input ~ 0
+Text GLabel 9250 5200 0    50   Input ~ 0
 VMB
 $Comp
 L power:GND #PWR0118
@@ -460,11 +456,11 @@ Wire Wire Line
 	9250 3650 9500 3650
 Text GLabel 9250 3950 0    50   Output ~ 0
 PO-CLKDr2
-Text GLabel 9250 3650 0    50   Output ~ 0
-SH-CLKDr2
 Text GLabel 9250 3750 0    50   Output ~ 0
-PWM2
+SH-CLKDr2
 Text GLabel 9250 3850 0    50   Output ~ 0
+PWM2
+Text GLabel 9250 4150 0    50   Output ~ 0
 SerialDataInDr2
 $Comp
 L Connector:Conn_01x06_Male J4
@@ -535,22 +531,17 @@ Wire Wire Line
 	9250 2850 9500 2850
 Wire Wire Line
 	9250 2950 9500 2950
-Text GLabel 9250 4150 0    50   Output ~ 0
+Text GLabel 8300 4050 0    50   Output ~ 0
 VMB
-Wire Wire Line
-	9400 4300 9400 4150
-Connection ~ 9400 4150
-Wire Wire Line
-	9400 4150 9500 4150
 $Comp
 L power:GND #PWR0137
 U 1 1 5F975427
-P 9400 4600
-F 0 "#PWR0137" H 9400 4350 50  0001 C CNN
-F 1 "GND" H 9405 4427 50  0000 C CNN
-F 2 "" H 9400 4600 50  0001 C CNN
-F 3 "" H 9400 4600 50  0001 C CNN
-	1    9400 4600
+P 8500 4500
+F 0 "#PWR0137" H 8500 4250 50  0001 C CNN
+F 1 "GND" H 8505 4327 50  0000 C CNN
+F 2 "" H 8500 4500 50  0001 C CNN
+F 3 "" H 8500 4500 50  0001 C CNN
+	1    8500 4500
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -883,23 +874,21 @@ Connectors
 $Comp
 L power:GND #PWR0145
 U 1 1 5FC7793A
-P 9350 6250
-F 0 "#PWR0145" H 9350 6000 50  0001 C CNN
-F 1 "GND" H 9355 6077 50  0000 C CNN
-F 2 "" H 9350 6250 50  0001 C CNN
-F 3 "" H 9350 6250 50  0001 C CNN
-	1    9350 6250
+P 8850 5950
+F 0 "#PWR0145" H 8850 5700 50  0001 C CNN
+F 1 "GND" H 8855 5777 50  0000 C CNN
+F 2 "" H 8850 5950 50  0001 C CNN
+F 3 "" H 8850 5950 50  0001 C CNN
+	1    8850 5950
 	1    0    0    -1  
 $EndComp
-Text GLabel 9000 5950 0    50   Input ~ 0
+Text GLabel 9300 6050 0    50   Input ~ 0
 VCC6v5
-Wire Wire Line
-	9000 5950 9500 5950
 Wire Wire Line
 	9350 6250 9350 6150
 Wire Wire Line
 	9350 6150 9500 6150
-Text GLabel 9300 6050 0    50   Input ~ 0
+Text GLabel 9350 6250 0    50   Input ~ 0
 PWM2
 Wire Wire Line
 	9300 6050 9500 6050
@@ -1052,17 +1041,17 @@ $EndComp
 $Comp
 L Device:CP1 C?
 U 1 1 602E4B0B
-P 9400 4450
+P 8500 4350
 AR Path="/5F455032/602E4B0B" Ref="C?"  Part="1" 
 AR Path="/5F4C637B/602E4B0B" Ref="C?"  Part="1" 
 AR Path="/5F475AB3/602E4B0B" Ref="C14"  Part="1" 
-F 0 "C14" H 9515 4496 50  0000 L CNN
-F 1 "100uF" H 9515 4405 50  0000 L CNN
-F 2 "Capacitor_SMD:CP_Elec_6.3x7.7" H 9400 4450 50  0001 C CNN
-F 3 "~" H 9400 4450 50  0001 C CNN
-F 4 "EEEFK1E101XP" H 9400 4450 50  0001 C CNN "Name"
-F 5 "Panasonic" H 9400 4450 50  0001 C CNN "Manufacturer"
-	1    9400 4450
+F 0 "C14" H 8615 4396 50  0000 L CNN
+F 1 "100uF" H 8615 4305 50  0000 L CNN
+F 2 "Capacitor_SMD:CP_Elec_6.3x7.7" H 8500 4350 50  0001 C CNN
+F 3 "~" H 8500 4350 50  0001 C CNN
+F 4 "EEEFK1E101XP" H 8500 4350 50  0001 C CNN "Name"
+F 5 "Panasonic" H 8500 4350 50  0001 C CNN "Manufacturer"
+	1    8500 4350
 	1    0    0    -1  
 $EndComp
 $Comp
@@ -1088,7 +1077,7 @@ AR Path="/5F4C637B/6024A854" Ref="TP?"  Part="1"
 AR Path="/5F475AB3/6024A854" Ref="TP5"  Part="1" 
 F 0 "TP5" H 2358 5068 50  0000 L CNN
 F 1 "TestPoint" H 2358 4977 50  0001 L CNN
-F 2 "TestPoint:TestPoint_Pad_D4.0mm" H 2500 4950 50  0001 C CNN
+F 2 "TestPoint:TestPoint_Pad_D1.5mm" H 2500 4950 50  0001 C CNN
 F 3 "~" H 2500 4950 50  0001 C CNN
 	1    2300 4950
 	1    0    0    -1  
@@ -1102,7 +1091,7 @@ AR Path="/5F4C637B/60253EF6" Ref="TP?"  Part="1"
 AR Path="/5F475AB3/60253EF6" Ref="TP7"  Part="1" 
 F 0 "TP7" H 3908 5068 50  0000 L CNN
 F 1 "TestPoint" H 3908 4977 50  0001 L CNN
-F 2 "TestPoint:TestPoint_Pad_D4.0mm" H 4050 4950 50  0001 C CNN
+F 2 "TestPoint:TestPoint_Pad_D1.5mm" H 4050 4950 50  0001 C CNN
 F 3 "~" H 4050 4950 50  0001 C CNN
 	1    3850 4950
 	1    0    0    -1  
@@ -1116,7 +1105,7 @@ AR Path="/5F4C637B/602544A2" Ref="TP?"  Part="1"
 AR Path="/5F475AB3/602544A2" Ref="TP8"  Part="1" 
 F 0 "TP8" H 2508 6468 50  0000 L CNN
 F 1 "TestPoint" H 2508 6377 50  0001 L CNN
-F 2 "TestPoint:TestPoint_Pad_D4.0mm" H 2650 6350 50  0001 C CNN
+F 2 "TestPoint:TestPoint_Pad_D1.5mm" H 2650 6350 50  0001 C CNN
 F 3 "~" H 2650 6350 50  0001 C CNN
 	1    2450 6350
 	1    0    0    -1  
@@ -1130,7 +1119,7 @@ AR Path="/5F4C637B/60254BBE" Ref="TP?"  Part="1"
 AR Path="/5F475AB3/60254BBE" Ref="TP9"  Part="1" 
 F 0 "TP9" H 3858 6468 50  0000 L CNN
 F 1 "TestPoint" H 3858 6377 50  0001 L CNN
-F 2 "TestPoint:TestPoint_Pad_D4.0mm" H 4000 6350 50  0001 C CNN
+F 2 "TestPoint:TestPoint_Pad_D1.5mm" H 4000 6350 50  0001 C CNN
 F 3 "~" H 4000 6350 50  0001 C CNN
 	1    3800 6350
 	1    0    0    -1  
@@ -1242,4 +1231,15 @@ $EndComp
 Connection ~ 5850 2100
 Wire Wire Line
 	5850 2100 5850 2450
+Wire Wire Line
+	8850 5950 9500 5950
+Wire Wire Line
+	9250 4150 9500 4150
+Wire Wire Line
+	8300 4050 8500 4050
+Wire Wire Line
+	8500 4200 8500 4050
+Connection ~ 8500 4050
+Wire Wire Line
+	8500 4050 9500 4050
 $EndSCHEMATC

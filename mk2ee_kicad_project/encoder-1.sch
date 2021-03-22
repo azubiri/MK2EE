@@ -13,7 +13,7 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
-Text GLabel 3950 1900 2    50   Output ~ 0
+Text GLabel 3950 2600 2    50   Output ~ 0
 CSn3
 Text GLabel 3950 2000 2    50   Output ~ 0
 LED1-R3
@@ -21,13 +21,12 @@ Text GLabel 3950 2100 2    50   Output ~ 0
 LED1-G3
 Text GLabel 3950 2200 2    50   Output ~ 0
 LED1-B3
-Text GLabel 3950 2300 2    50   Output ~ 0
+Text GLabel 3950 2500 2    50   Output ~ 0
 LED2-R3
 Text GLabel 3950 2400 2    50   Output ~ 0
 LED2-G3
-NoConn ~ 3700 2600
 Wire Wire Line
-	3700 1900 3950 1900
+	3700 2600 3950 2600
 Wire Wire Line
 	3700 2000 3950 2000
 Wire Wire Line
@@ -35,39 +34,39 @@ Wire Wire Line
 Wire Wire Line
 	3700 2200 3950 2200
 Wire Wire Line
-	3700 2300 3950 2300
+	3700 2500 3950 2500
 Wire Wire Line
 	3700 2400 3950 2400
-Text GLabel 9150 2000 0    50   Output ~ 0
+Text GLabel 9150 1900 0    50   Output ~ 0
 CLKEn3
-Text GLabel 9150 1900 0    50   Input ~ 0
+Text GLabel 9150 1700 0    50   Input ~ 0
 MISO3
 Text GLabel 9150 1800 0    50   Output ~ 0
 SH-CLKEn3
-Text GLabel 9150 2100 0    50   Output ~ 0
-SerialDataInEn3
 Text GLabel 9150 2200 0    50   Output ~ 0
+SerialDataInEn3
+Text GLabel 9150 2000 0    50   Output ~ 0
 PO-CLKEn3
 Wire Wire Line
 	9150 1800 9400 1800
 Wire Wire Line
+	9150 1700 9400 1700
+Wire Wire Line
 	9150 1900 9400 1900
-Wire Wire Line
-	9150 2000 9400 2000
-Wire Wire Line
-	9150 2100 9400 2100
 Wire Wire Line
 	9150 2200 9400 2200
 Wire Wire Line
-	9150 2650 9400 2650
+	9150 2000 9400 2000
 Wire Wire Line
-	9150 2750 9400 2750
-Wire Wire Line
-	9150 2850 9400 2850
+	9150 3050 9400 3050
 Wire Wire Line
 	9150 2950 9400 2950
 Wire Wire Line
-	9150 3050 9400 3050
+	9150 2750 9400 2750
+Wire Wire Line
+	9150 2650 9400 2650
+Wire Wire Line
+	9150 2850 9400 2850
 Text GLabel 2250 1300 0    50   Input ~ 0
 VCCD3v3
 Text GLabel 2650 2100 0    50   Input ~ 0
@@ -87,19 +86,19 @@ Wire Wire Line
 	3950 2800 3700 2800
 Wire Wire Line
 	2650 1900 2900 1900
-Text GLabel 3950 2500 2    50   Output ~ 0
+Text GLabel 3950 2300 2    50   Output ~ 0
 LED2-B3
 Wire Wire Line
-	3700 2500 3950 2500
-Text GLabel 9150 2850 0    50   Input ~ 0
+	3700 2300 3950 2300
+Text GLabel 9150 2750 0    50   Input ~ 0
 CLKEn3
-Text GLabel 9150 2750 0    50   Output ~ 0
+Text GLabel 9150 2950 0    50   Output ~ 0
 MISO3
-Text GLabel 9150 2650 0    50   Input ~ 0
-SH-CLKEn3
-Text GLabel 9150 2950 0    50   Input ~ 0
-SerialDataOutEn3
 Text GLabel 9150 3050 0    50   Input ~ 0
+SH-CLKEn3
+Text GLabel 9150 2650 0    50   Input ~ 0
+SerialDataOutEn3
+Text GLabel 9150 2850 0    50   Input ~ 0
 PO-CLKEn3
 $Comp
 L AS5047D-ATSM:AS5047D-ATSM U8
@@ -476,8 +475,6 @@ F 5 "MULTICOMP PRO" H 4650 5650 50  0001 C CNN "Manufacturer"
 	1    4650 5650
 	-1   0    0    1   
 $EndComp
-NoConn ~ 9400 2550
-NoConn ~ 9400 1700
 $Comp
 L Connector:Conn_01x02_Male J?
 U 1 1 60237A87
@@ -578,4 +575,7 @@ Connection ~ 2750 1300
 Connection ~ 2450 1300
 Wire Wire Line
 	2450 1300 2750 1300
+NoConn ~ 3700 1900
+NoConn ~ 9400 2100
+NoConn ~ 9400 2550
 $EndSCHEMATC

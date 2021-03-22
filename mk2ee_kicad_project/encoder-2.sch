@@ -16,7 +16,7 @@ $EndDescr
 Wire Wire Line
 	9650 2050 9900 2050
 Wire Wire Line
-	9650 2150 9900 2150
+	9650 2550 9900 2550
 Wire Wire Line
 	9650 2250 9900 2250
 Wire Wire Line
@@ -24,24 +24,22 @@ Wire Wire Line
 Wire Wire Line
 	9650 2450 9900 2450
 Wire Wire Line
-	9650 2550 9900 2550
+	9650 2850 9900 2850
 Wire Wire Line
 	9650 2650 9900 2650
 Wire Wire Line
 	9650 2750 9900 2750
 Wire Wire Line
-	9650 2850 9900 2850
-Wire Wire Line
-	9650 2950 9850 2950
-Text GLabel 9650 2750 0    50   Output ~ 0
+	9650 2150 9900 2150
+Text GLabel 9650 2150 0    50   Output ~ 0
 CLKEn4
-Text GLabel 9650 2650 0    50   Output ~ 0
-MISO4
-Text GLabel 9650 2350 0    50   Output ~ 0
-SH-CLKEn4
-Text GLabel 9650 2550 0    50   Output ~ 0
-SerialDataInEn4
 Text GLabel 9650 2450 0    50   Output ~ 0
+MISO4
+Text GLabel 9650 2850 0    50   Output ~ 0
+SH-CLKEn4
+Text GLabel 9650 2250 0    50   Output ~ 0
+SerialDataInEn4
+Text GLabel 9650 2650 0    50   Output ~ 0
 PO-CLKEn4
 $Comp
 L AS5047D-ATSM:AS5047D-ATSM IC?
@@ -139,86 +137,86 @@ F 3 "" H 7350 2700 50  0001 C CNN
 	1    7350 2700
 	1    0    0    -1  
 $EndComp
-Text GLabel 9650 2150 0    50   Output ~ 0
-PO-CLKDr4
 Text GLabel 9650 2050 0    50   Output ~ 0
+PO-CLKDr4
+Text GLabel 9650 2550 0    50   Output ~ 0
 SH-CLKDr4
-Text GLabel 9650 2950 0    50   Output ~ 0
+Text GLabel 9650 3050 0    50   Output ~ 0
 VCCF3v3
-Text GLabel 9650 2250 0    50   Output ~ 0
+Text GLabel 9650 2750 0    50   Output ~ 0
 SerialDataDr4
 Text GLabel 9650 3150 0    50   Output ~ 0
 VMC
 Wire Wire Line
-	9650 3050 9900 3050
+	9650 3050 9850 3050
 Wire Wire Line
 	9650 3150 9900 3150
 Wire Wire Line
+	9650 5150 9900 5150
+Wire Wire Line
 	9650 3850 9900 3850
 Wire Wire Line
-	9650 3950 9900 3950
+	9650 3750 9900 3750
 Wire Wire Line
-	9650 4050 9900 4050
+	9650 5050 9900 5050
 Wire Wire Line
-	9650 4150 9900 4150
-Wire Wire Line
-	9650 4250 9900 4250
-Text GLabel 9650 4050 0    50   Input ~ 0
+	9650 5250 9900 5250
+Text GLabel 9650 3750 0    50   Input ~ 0
 CLKEn4
-Text GLabel 9650 3950 0    50   Input ~ 0
-MISO4
 Text GLabel 9650 3850 0    50   Input ~ 0
+MISO4
+Text GLabel 9650 5150 0    50   Input ~ 0
 SH-CLKEn4
-Text GLabel 9650 4150 0    50   Input ~ 0
+Text GLabel 9650 5050 0    50   Input ~ 0
 SerialDataOutEn4
-Text GLabel 9650 4250 0    50   Input ~ 0
+Text GLabel 9650 5250 0    50   Input ~ 0
 PO-CLKEn4
-Text GLabel 9550 5050 0    50   Input ~ 0
+Text GLabel 9550 3950 0    50   Input ~ 0
 SerialDataDr4
-Text GLabel 9550 4850 0    50   Input ~ 0
-SH-CLKDr4
 Text GLabel 9550 4950 0    50   Input ~ 0
+SH-CLKDr4
+Text GLabel 9550 4750 0    50   Input ~ 0
 PO-CLKDr4
-Text GLabel 9550 5150 0    50   Input ~ 0
+Text GLabel 9550 4250 0    50   Input ~ 0
 VMC
-Wire Wire Line
-	9550 4850 9900 4850
 Wire Wire Line
 	9550 4950 9900 4950
 Wire Wire Line
-	9550 5050 9900 5050
+	9550 4750 9900 4750
 Wire Wire Line
-	9550 5150 9900 5150
+	9550 3950 9900 3950
 Wire Wire Line
-	9900 5250 9150 5250
+	9550 4250 9900 4250
 Wire Wire Line
-	9150 5250 9150 5400
+	9900 4150 9150 4150
+Wire Wire Line
+	9150 4150 9150 4300
 $Comp
 L power:GND #PWR?
 U 1 1 5F53EADC
-P 9150 5400
+P 9150 4300
 AR Path="/5F4C6CE4/5F53EADC" Ref="#PWR?"  Part="1" 
 AR Path="/5F4C6BF4/5F53EADC" Ref="#PWR?"  Part="1" 
 AR Path="/5F505E68/5F53EADC" Ref="#PWR0134"  Part="1" 
-F 0 "#PWR0134" H 9150 5150 50  0001 C CNN
-F 1 "GND" H 9155 5227 50  0000 C CNN
-F 2 "" H 9150 5400 50  0001 C CNN
-F 3 "" H 9150 5400 50  0001 C CNN
-	1    9150 5400
+F 0 "#PWR0134" H 9150 4050 50  0001 C CNN
+F 1 "GND" H 9155 4127 50  0000 C CNN
+F 2 "" H 9150 4300 50  0001 C CNN
+F 3 "" H 9150 4300 50  0001 C CNN
+	1    9150 4300
 	1    0    0    -1  
 $EndComp
 $Comp
 L power:GND #PWR?
 U 1 1 5F5DDE3D
-P 9650 3050
+P 9650 2950
 AR Path="/5F4C6CE4/5F5DDE3D" Ref="#PWR?"  Part="1" 
 AR Path="/5F4C6BF4/5F5DDE3D" Ref="#PWR?"  Part="1" 
 AR Path="/5F505E68/5F5DDE3D" Ref="#PWR0136"  Part="1" 
-F 0 "#PWR0136" H 9650 2800 50  0001 C CNN
-F 1 "GND" H 9655 2877 50  0000 C CNN
-F 2 "" H 9650 3050 50  0001 C CNN
-F 3 "" H 9650 3050 50  0001 C CNN
-	1    9650 3050
+F 0 "#PWR0136" H 9650 2700 50  0001 C CNN
+F 1 "GND" H 9655 2777 50  0000 C CNN
+F 2 "" H 9650 2950 50  0001 C CNN
+F 3 "" H 9650 2950 50  0001 C CNN
+	1    9650 2950
 	0    1    1    0   
 $EndComp
 Text GLabel 4100 2600 2    50   Output ~ 0
@@ -306,12 +304,12 @@ NoConn ~ 4100 2900
 NoConn ~ 4100 3000
 NoConn ~ 4100 3100
 NoConn ~ 4100 3200
-Text GLabel 9650 2850 0    50   Output ~ 0
+Text GLabel 9650 2350 0    50   Output ~ 0
 PWM4
-Text GLabel 9550 4750 0    50   Input ~ 0
+Text GLabel 9550 4850 0    50   Input ~ 0
 PWM4
 Wire Wire Line
-	9550 4750 9900 4750
+	9550 4850 9900 4850
 Text Notes 5900 1650 0    100  ~ 0
 Magnetic Encoder
 Text Notes 2100 1750 0    100  ~ 0
@@ -349,7 +347,6 @@ F 5 "Molex" H 10100 4050 50  0001 C CNN "Manufacturer"
 	1    10100 4050
 	-1   0    0    1   
 $EndComp
-NoConn ~ 9900 3750
 $Comp
 L Connector:Conn_01x06_Male J?
 U 1 1 6022FE7E
@@ -375,7 +372,7 @@ AR Path="/5F4C637B/6024674F" Ref="J?"  Part="1"
 AR Path="/5F455032/6024674F" Ref="J?"  Part="1" 
 F 0 "J11" H 10208 3421 50  0000 C CNN
 F 1 "Conn_02x6_Male" H 10208 3330 50  0000 C CNN
-F 2 "Connector_PinSocket_2.54mm:PinSocket_2x06_P2.54mm_Horizontal" H 10100 2650 50  0001 C CNN
+F 2 "Connector_IDC:IDC-Header_2x06_P2.54mm_Horizontal" H 10100 2650 50  0001 C CNN
 F 3 "~" H 10100 2650 50  0001 C CNN
 F 4 "T821112A1R100CEU" H 10208 3239 50  0000 C CNN "Name"
 F 5 "AMPHENOL ICC" H 10100 2650 50  0001 C CNN "Manufacturer"
@@ -385,20 +382,17 @@ $EndComp
 $Comp
 L power:PWR_FLAG #FLG?
 U 1 1 60304507
-P 9850 2950
+P 9850 3050
 AR Path="/5F455032/60304507" Ref="#FLG?"  Part="1" 
 AR Path="/5F4C637B/60304507" Ref="#FLG?"  Part="1" 
 AR Path="/5F505E68/60304507" Ref="#FLG0108"  Part="1" 
-F 0 "#FLG0108" H 9850 3025 50  0001 C CNN
-F 1 "PWR_FLAG" H 9850 3123 50  0000 C CNN
-F 2 "" H 9850 2950 50  0001 C CNN
-F 3 "~" H 9850 2950 50  0001 C CNN
-	1    9850 2950
+F 0 "#FLG0108" H 9850 3125 50  0001 C CNN
+F 1 "PWR_FLAG" H 9850 3223 50  0000 C CNN
+F 2 "" H 9850 3050 50  0001 C CNN
+F 3 "~" H 9850 3050 50  0001 C CNN
+	1    9850 3050
 	1    0    0    -1  
 $EndComp
-Connection ~ 9850 2950
-Wire Wire Line
-	9850 2950 9900 2950
 Text Label 3300 2000 2    50   ~ 0
 pwr12
 $Comp
@@ -438,4 +432,10 @@ $EndComp
 Connection ~ 2600 2000
 Wire Wire Line
 	2600 2000 2900 2000
+Connection ~ 9850 3050
+Wire Wire Line
+	9850 3050 9900 3050
+Wire Wire Line
+	9650 2950 9900 2950
+NoConn ~ 9900 4050
 $EndSCHEMATC
