@@ -1,0 +1,19 @@
+{
+	"folders": [
+		{
+			"path": "..\\..\\..\\..\\Documents\\PlatformIO\\Projects\\Servo"
+		},
+		{
+			"name": "tested",
+			"path": "P:\\TFM\\Prototyping\\tested"
+		}
+	],
+	"settings": {
+		"files.associations": {
+			"*.md": "cpp",
+			"condition_variable": "cpp",
+			"future": "cpp",
+			"chrono": "cpp"
+		}
+	}
+}

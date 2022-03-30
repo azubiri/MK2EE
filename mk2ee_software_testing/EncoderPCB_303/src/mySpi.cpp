@@ -15,7 +15,7 @@ void printSPIConfig() {
 }
 
 void mySPI1() {
-    // SPI5 Clock is enabled
+    // SPI1 Clock is enabled
     RCC->APB2ENR = setBit((RCC->APB2ENR), RCC_APB2ENR_SPI1EN_Pos);
     // GPIO activation
     RCC->AHBENR = RCC->AHBENR | RCC_AHBENR_GPIOAEN_Pos;
@@ -25,9 +25,9 @@ void mySPI1() {
     // Clock frequency
     // Maximum frequencies:
     // AS5047=10MHz
-    // STM32F411RE_APB2=50MHz
+    // STM32F303RE_APB2=72MHz
     // SN74HC595_3.3V=5MHz
-    // SPI5->CR1 = SPI5->CR1 | SPI_CR1_BR_0; // Frequency at 100MHz/32=1.56MHz
+    // SPI1->CR1 = SPI1->CR1 | SPI_CR1_BR_0; // Frequency at 72MHz/32=562.5KHz
     SPI1->CR1 = SPI1->CR1 | SPI_CR1_BR_1;
     SPI1->CR1 = SPI1->CR1 | SPI_CR1_BR_2;
 
