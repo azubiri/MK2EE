@@ -24,7 +24,7 @@ typedef enum {
 } As5047Diagnostics;
 
 int mask(int sensor_result);
-float degrees(int sensor_result);
+float get_angle(int sensor_result);
 bool parity_check(int sensor_result);
 
 #endif

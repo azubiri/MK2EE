@@ -1,10 +1,11 @@
 #ifndef MYSPI_H
 #define MYSPI_H
 
-#include "mk2ee.hpp"
+#include <mbed.h>
+#include "mk2ee_definitions.hpp"
 
-void printSPIConfig();
+void printSPI1Config();
 void mySPI1();
-int SPI_Recieve();
+int SPI1_Recieve();
 
 #endif

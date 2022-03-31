@@ -1,53 +1,102 @@
-#include "mk2ee.hpp"
+/**
+ * @file main.cpp
+ * @author Alberto Zubiri Carrizosa (azubiri@pm.me)
+ * @brief Testing software for an EncoderPCB with a Nucleo F303RE from STMicroelectronics.
+ * 
+ * The main goal of this board is to provide rotation position readings from the magnetic encoder AS5047 to the microcontroller STMF303RE.
+ * 
+ * There is a communication between a microcontroller and a magnetic encoder, two RBG LEDs are included in order to indicate the state of the board.
+ * To reduce the number of cables a shift register with parallel output is added to connect from the all LEDs imputs and one encoder input to the microcontroller.
+ * There are three connectors, J8 (input digital signals), J9 (output digital signals but it's not used here), and J10 (power supply).
+ * 
+ * Components which we are testing inside EncoderPCB:
+ * - 1 x SN74HC595: Shift Register with Parallel Output
+ * - 1 x AS5047: Magnetic Encoder
+ * - 2 x ASMB-KTF0-0A306: RGB LED
+ * 
+ * More information about components in:
+ * - as5047.hpp
+ * - sn74hc595.hpp
+ * 
+ * 2 SPI communications are configured for this software testing:
+ * - From F303RE to SN74HC595: MOSI, SCK and NSS
+ * - From AS5047 to F303RE: MISO, SCK, (NSS is an output of SN74HC595)
+ * In both communications F303RE acts as a master and the other devices as slaves.
+ * 
+ * This software tests a proper communication between:
+ * - STMicrocontroller F303RE and SN74HC595
+ * - SN74HC595 and AS5047 encoder
+ * - SN74HC595 and 2 RGB LEDs
+ * - AS5047 encoder and STMicrocontroller F303RE
+ * 
+ * @version 0.1
+ * @date 2022-03-31
+ * 
+ * @copyright Copyright (c) 2022
+ * 
+ */
 
-// Shift Register transmitter and receiver
-uint16_t data_tx;
-uint16_t data_rx;
+#include "mk2ee.hpp"
 
 static UnbufferedSerial pc(USBTX, USBRX, 9600); // tx, rx
 
+/**
+ * @brief Default values for each output of the SN74HC595 component. RGB LEDs from EncoderPCB board will light with purple colour to indicate
+ * the board is in default mode. LEDs are turn on with a low level. CSn output is turn on to avoid an encoder reading.
+ * 
+ * Bit outputs information:
+ * Bit0: Not used
+ * Bit1: Red colour from RGB LED1
+ * Bit2: Green colour from RGB LED1
+ * Bit3: Blue colour from RGB LED1
+ * Bit4: Blue colour from RGB LED2
+ * Bit5: Green colour from RGB LED2
+ * Bit6: Red colour from RGB LED2
+ * Bit7: CSn signal for the Encoder AS5047
+ */
 void default_shiftRegister() {
+
+    uint16_t data_tx = 0;
+
+    data_tx = clearBit(data_tx, LED1Red); // ON
+    data_tx = setBit(data_tx, LED1Green); // OFF
+    data_tx = clearBit(data_tx, LED1Blue); // ON
+    data_tx = clearBit(data_tx, LED2Red); // ON
+    data_tx = setBit(data_tx, LED2Green); // OFF
+    data_tx = clearBit(data_tx, LED2Blue); // ON
+    data_tx = setBit(data_tx, SH_PO_CSn); // OFF
     
-    data_tx = 0;
-    data_tx = clearBit(data_tx, LED1Red); //To-Do: añadir on/off
-    data_tx = setBit(data_tx, LED1Green); //off
-    data_tx = clearBit(data_tx, LED1Blue);
-    data_tx = clearBit(data_tx, LED2Red);
-    data_tx = setBit(data_tx, LED2Green);
-    data_tx = clearBit(data_tx, LED2Blue);
-    data_tx = setBit(data_tx, SH_PO_CSn);
-    
-    shiftOut(data_tx, &data_rx);
+    shiftOut(data_tx);
 
 }
 
 void read_angle_encoder() {
 
-    int angle;
+    int receive_sh_po;
     
     //////////////////////////////////////////////////////////////
     // Enable an SPI Communication
     //////////////////////////////////////////////////////////////
     // Set values for each output of sh-po
-    data_tx = 0;
+    uint16_t data_tx = 0;
     //Timer t;
     //t.start();
     // CSn is set as 0 to select IC encoder
-    //(GPIOC -> ODR) = setBit((GPIOC -> ODR), GPIO_ODR_OD3_Pos); // To-Do: cambiar por bsrr
+    prf_0;
     data_tx = setBit(data_tx, LED1Red);
     data_tx = setBit(data_tx, LED1Blue);
     data_tx = setBit(data_tx, LED2Red);
     data_tx = setBit(data_tx, LED2Blue);
     data_tx = clearBit(data_tx, SH_PO_CSn);
-    //(GPIOC -> ODR) = clearBit((GPIOC -> ODR), GPIO_ODR_OD3_Pos); // To-Do: cambiar por bsrr
+    prf_1;
     //t.stop();
     //printf("The time taken was %llu microseconds\n", std::chrono::duration_cast<std::chrono::microseconds>(t.elapsed_time()).count());
 
     // Update sh-po outputs
-    shiftOut(data_tx, &data_rx);
+    shiftOut(data_tx);
 
     // Wait at least 350ns for a SPI communication
-    wait_ns(700); // To-Do: Asegurar con osc. que realmente espera 700ns
+    wait_ns(700); // TODO: Asegurar con osc. que realmente espera 700ns
 
     //////////////////////////////////////////////////////////////
     // SPI Communication
@@ -55,7 +104,7 @@ void read_angle_encoder() {
     // Angle reading in bits through MISO connection
     // angle = encoder.write(AS_CMD_ANGLE);
     // angle = myWrite(AS_CMD_ANGLE);
-    angle = SPI_Recieve(); //To-Do: funcion ambigua
+    receive_sh_po = SPI1_Recieve();
     //printf("Received bytes: %x\n\n", angle);
     //////////////////////////////////////////////////////////////
     // Desable an SPI Communication
@@ -64,28 +113,28 @@ void read_angle_encoder() {
     data_tx = setBit(data_tx, SH_PO_CSn);
 
     // Update sh-po outputs
-    shiftOut(data_tx, &data_rx);
+    shiftOut(data_tx);
 
     // Wait at least 350ns for a SPI communication
     wait_ns(700);
     
-    if( parity_check(angle))
-    {
+    if(parity_check(receive_sh_po)) {
         // Convert range from 0 to 2^14-1 to 0 - 360 degrees
-        float deg = degrees(angle); // To-Do: Cambiar el nombre angle
-        printf("Angle: %.2f degrees\r\n", deg );
+        float anglef = get_angle(receive_sh_po);
+        printf("Angle: %.2f degrees\r\n", anglef );
     }
-    else
-    {
+    else {
         printf("Parity check failed.\r\n");
     }
     
 }
 
 void leds() {
-    char *colour = new char[1]; // To-Do: usar memria statica
-    bool isColour = true;
 
+    char colour;
+    bool isColour = true;
+    uint16_t data_tx;
+    
     printf("LEDs Menu:\n");
     while(isColour) {
 
@@ -99,11 +148,12 @@ void leds() {
         printf("Shutdown LEDS: o\n");
         printf("Exit: e\n");
         printf("White colour: other\n");
-        pc.read(colour, sizeof(colour));
+        
+        pc.read(&colour, 1);
 
         data_tx = 0;
 
-        switch (*colour) {
+        switch (colour) {
         
         case 'o':
             printf("LEDs are shutdown\n\n");
@@ -182,24 +232,17 @@ void leds() {
         }
     
     // Update sh-po outputs
-    shiftOut(data_tx, &data_rx);
+    shiftOut(data_tx);
 
     }
-    delete[] colour;
+
 }
 
 int main() {
 
-    printf("\n\n\n\n");
-
-    char c1;
+    char option;
     // AS5047 spi confuguration
-    setUpSpi();
-
-    // SPI Encoder configuration
-    //encoder.format(16, 1);
-    //encoder.frequency(1000000);
-    
+    setUpSpi4();
 
     // Default values at output registers
     default_shiftRegister();
@@ -212,10 +255,9 @@ int main() {
         printf("SPI Initialization: p\n");
         printf("LEDs menu: l\n\n");
 
-        pc.read(&c1, 1);
+        pc.read(&option, 1);
         
-        switch (c1)
-        {
+        switch (option) {
             
             case 'd':
                 default_shiftRegister();
@@ -235,15 +277,17 @@ int main() {
                 printf("-------------------------\n");
                 printf("----SPI Configuration----\n");
                 printf("-------------------------\n");
-                printSPIConfig();
-                //portsInit();
+                printSPI1Config();
                 mySPI1();
-                printSPIConfig();
+                printSPI1Config();
                 break;
 
             default:
                 printf("This option doesn't exist\n");
                 break;
+        
         }
+
     }
+    
 }

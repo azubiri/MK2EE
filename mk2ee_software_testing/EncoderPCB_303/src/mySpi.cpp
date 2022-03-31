@@ -1,6 +1,6 @@
 #include "mySpi.hpp"
 
-void printSPIConfig() {
+void printSPI1Config() {
     printf("Clocks activation:\n");
     printf("RCC->APB2ENR= %x: %x\n", &RCC->APB2ENR, RCC->APB2ENR);
     printf("GPIOs activation:\n");
@@ -71,7 +71,7 @@ void mySPI1() {
     SPI1->CR1 = setBit((SPI1->CR1), SPI_CR1_SPE_Pos); // SPI1 peripheric is enabled
 }
 
-int SPI_Recieve() {
+int SPI1_Recieve() {
 
     //wait_ns(700);
     int data;
