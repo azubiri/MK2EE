@@ -9,7 +9,7 @@
 
 #define modifyBitPos(n, p, b) ((n & ~(1 << p)) | (b << p)) // Set or clear a bit given a position
 #define setBit(n, p) (n | (1 << p))
-#define clearBit(n, p) (n & ~(1 << p))
+#define clearBit(n, p) ((n) & ~(1 << (p)))
 #define LED1Red     1
 #define LED1Green   2
 #define LED1Blue    3

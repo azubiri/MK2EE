@@ -8,8 +8,9 @@ static UnbufferedSerial pc(USBTX, USBRX, 9600); // tx, rx
 
 void default_shiftRegister() {
     
-    data_tx = clearBit(data_tx, LED1Red);
-    data_tx = setBit(data_tx, LED1Green);
+    data_tx = 0;
+    data_tx = clearBit(data_tx, LED1Red); //To-Do: añadir on/off
+    data_tx = setBit(data_tx, LED1Green); //off
     data_tx = clearBit(data_tx, LED1Blue);
     data_tx = clearBit(data_tx, LED2Red);
     data_tx = setBit(data_tx, LED2Green);
@@ -32,13 +33,13 @@ void read_angle_encoder() {
     //Timer t;
     //t.start();
     // CSn is set as 0 to select IC encoder
-    //(GPIOC -> ODR) = setBit((GPIOC -> ODR), GPIO_ODR_OD3_Pos);
+    //(GPIOC -> ODR) = setBit((GPIOC -> ODR), GPIO_ODR_OD3_Pos); // To-Do: cambiar por bsrr
     data_tx = setBit(data_tx, LED1Red);
     data_tx = setBit(data_tx, LED1Blue);
     data_tx = setBit(data_tx, LED2Red);
     data_tx = setBit(data_tx, LED2Blue);
     data_tx = clearBit(data_tx, SH_PO_CSn);
-    //(GPIOC -> ODR) = clearBit((GPIOC -> ODR), GPIO_ODR_OD3_Pos);
+    //(GPIOC -> ODR) = clearBit((GPIOC -> ODR), GPIO_ODR_OD3_Pos); // To-Do: cambiar por bsrr
     //t.stop();
     //printf("The time taken was %llu microseconds\n", std::chrono::duration_cast<std::chrono::microseconds>(t.elapsed_time()).count());
 
@@ -46,7 +47,7 @@ void read_angle_encoder() {
     shiftOut(data_tx, &data_rx);
 
     // Wait at least 350ns for a SPI communication
-    wait_ns(700);
+    wait_ns(700); // To-Do: Asegurar con osc. que realmente espera 700ns
 
     //////////////////////////////////////////////////////////////
     // SPI Communication
@@ -54,7 +55,7 @@ void read_angle_encoder() {
     // Angle reading in bits through MISO connection
     // angle = encoder.write(AS_CMD_ANGLE);
     // angle = myWrite(AS_CMD_ANGLE);
-    angle = SPI_Recieve();
+    angle = SPI_Recieve(); //To-Do: funcion ambigua
     //printf("Received bytes: %x\n\n", angle);
     //////////////////////////////////////////////////////////////
     // Desable an SPI Communication
@@ -71,7 +72,7 @@ void read_angle_encoder() {
     if( parity_check(angle))
     {
         // Convert range from 0 to 2^14-1 to 0 - 360 degrees
-        float deg = degrees(angle);
+        float deg = degrees(angle); // To-Do: Cambiar el nombre angle
         printf("Angle: %.2f degrees\r\n", deg );
     }
     else
@@ -82,7 +83,7 @@ void read_angle_encoder() {
 }
 
 void leds() {
-    char *colour = new char[1];
+    char *colour = new char[1]; // To-Do: usar memria statica
     bool isColour = true;
 
     printf("LEDs Menu:\n");
@@ -191,8 +192,7 @@ int main() {
 
     printf("\n\n\n\n");
 
-    char *c = new char[1];
-
+    char c1;
     // AS5047 spi confuguration
     setUpSpi();
 
@@ -212,9 +212,9 @@ int main() {
         printf("SPI Initialization: p\n");
         printf("LEDs menu: l\n\n");
 
-        pc.read(c, sizeof(c));
+        pc.read(&c1, 1);
         
-        switch (*c)
+        switch (c1)
         {
             
             case 'd':
