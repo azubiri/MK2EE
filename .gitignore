@@ -34,3 +34,5 @@ platformio.ini
 
 # Visual Studio files
 /.vscode/*
+*.json
+
