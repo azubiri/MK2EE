@@ -1,4 +1,5 @@
 #include "as5047.hpp"
+// todo: typedef int to enconderangle
 
 int mask(int sensor_result) {
 
@@ -15,6 +16,13 @@ float get_angle(int sensor_result) {
 
 }
 
+/**
+ * @brief 
+ * 
+ * @param sensor_result 
+ * @return true 
+ * @return false 
+ */
 bool parity_check(int sensor_result) {
 
     // Use the LSb of result to keep track of parity (0 = even, 1 = odd)

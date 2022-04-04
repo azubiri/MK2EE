@@ -3,6 +3,7 @@
 
 #define PULSE_DURATION 25 // Pulse duration SRCLK or RCLK high or low (in nanoseconds) 
 
+// TODO: Comentar que estas enumeraciones no se usan para este proyecto.
 typedef enum {
     AS_FLAG_PARITY = 0x8000,
     AS_FLAG_READ = 0x4000,
@@ -23,6 +24,7 @@ typedef enum {
     AS_DIAG_LOW_MAGNETIC = 0x0800,
 } As5047Diagnostics;
 
+// todo: function prototypes
 int mask(int sensor_result);
 float get_angle(int sensor_result);
 bool parity_check(int sensor_result);

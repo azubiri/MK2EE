@@ -1,7 +1,7 @@
 /**
  * @file main.cpp
  * @author Alberto Zubiri Carrizosa (azubiri@pm.me)
- * @brief Testing software for an EncoderPCB with a Nucleo F303RE from STMicroelectronics.
+ * @brief Testing software for an EncoderPCB with a Nucleo-F303RE board from STMicroelectronics.
  * 
  * The main goal of this board is to provide rotation position readings from the magnetic encoder AS5047 to the microcontroller STMF303RE.
  * 
@@ -29,6 +29,9 @@
  * - SN74HC595 and 2 RGB LEDs
  * - AS5047 encoder and STMicrocontroller F303RE
  * 
+ * TODO: Explicar conectores
+ * TODO: Explicar cómo funciona
+ * 
  * @version 0.1
  * @date 2022-03-31
  * 
@@ -36,7 +39,7 @@
  * 
  */
 
-#include "mk2ee.hpp"
+#include "mk2ee.hpp" //todo: poner todos los includes
 
 static UnbufferedSerial pc(USBTX, USBRX, 9600); // tx, rx
 
@@ -44,6 +47,7 @@ static UnbufferedSerial pc(USBTX, USBRX, 9600); // tx, rx
  * @brief Default values for each output of the SN74HC595 component. RGB LEDs from EncoderPCB board will light with purple colour to indicate
  * the board is in default mode. LEDs are turn on with a low level. CSn output is turn on to avoid an encoder reading.
  * 
+ * TODO: Poner ésto arriba
  * Bit outputs information:
  * Bit0: Not used
  * Bit1: Red colour from RGB LED1
@@ -72,7 +76,7 @@ void default_shiftRegister() {
 
 void read_angle_encoder() {
 
-    int receive_sh_po;
+    int receive_sh_po; // TODO: viene del encoder
     
     //////////////////////////////////////////////////////////////
     // Enable an SPI Communication
@@ -82,13 +86,13 @@ void read_angle_encoder() {
     //Timer t;
     //t.start();
     // CSn is set as 0 to select IC encoder
-    prf_0;
+    prf_0; // Timing: rising edge
     data_tx = setBit(data_tx, LED1Red);
     data_tx = setBit(data_tx, LED1Blue);
     data_tx = setBit(data_tx, LED2Red);
     data_tx = setBit(data_tx, LED2Blue);
     data_tx = clearBit(data_tx, SH_PO_CSn);
-    prf_1;
+    prf_1; // Timing: falling edge
     //t.stop();
     //printf("The time taken was %llu microseconds\n", std::chrono::duration_cast<std::chrono::microseconds>(t.elapsed_time()).count());
 

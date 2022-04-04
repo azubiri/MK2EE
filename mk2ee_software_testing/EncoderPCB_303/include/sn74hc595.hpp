@@ -3,6 +3,7 @@
 
 #include <mbed.h>
 
+// todo: ns
 #define PULSE_DURATION 25
 
 void setUpSpi4();

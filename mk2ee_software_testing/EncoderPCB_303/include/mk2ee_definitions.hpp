@@ -5,7 +5,7 @@
 #define setBit(n, p) ( (n) | (1 << (p)) )
 #define clearBit(n, p) ( (n) & ~(1 << (p)) )
 
-#define prf_0 (GPIOC -> BSRR) = setBit((GPIOC -> BSRR), GPIO_BSRR_BS_3)
+#define prf_0 (GPIOC -> BSRR) = setBit((GPIOC -> BSRR), GPIO_BSRR_BS_3) // TODO: cambiar
 #define prf_1 (GPIOC -> BSRR) = clearBit((GPIOC -> BSRR), GPIO_BSRR_BS_3)
 
 #define LED1Red     1

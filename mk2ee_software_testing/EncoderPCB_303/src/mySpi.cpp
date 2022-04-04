@@ -14,10 +14,10 @@ void printSPI1Config() {
     printf("SPI1->CR2= %x: %x\n\n", &SPI1->CR2, SPI1->CR2);
 }
 
-void mySPI1() {
+void mySPI1() { //todo: init
     // SPI1 Clock is enabled
     RCC->APB2ENR = setBit((RCC->APB2ENR), RCC_APB2ENR_SPI1EN_Pos);
-    // GPIO activation
+    // GPIO Clock is enabled
     RCC->AHBENR = RCC->AHBENR | RCC_AHBENR_GPIOAEN_Pos;
     RCC->AHBENR = RCC->AHBENR | RCC_AHBENR_GPIOBEN_Pos;
     RCC->AHBENR = RCC->AHBENR | RCC_AHBENR_GPIOCEN_Pos;
@@ -42,7 +42,7 @@ void mySPI1() {
     SPI1->CR2 = SPI1->CR2 | SPI_CR2_DS_3;
     
     // SSL is controled by hardware or software
-    SPI1->CR1 = setBit( (SPI1->CR1) , SPI_CR1_SSM_Pos); // The value is replaced by SSI
+    SPI1->CR1 = setBit( (SPI1->CR1) , SPI_CR1_SSM_Pos); // The value is replaced by SSI //todo: explicarlo mejor
     SPI1->CR1 = setBit((SPI1->CR1), SPI_CR1_SSI_Pos); // SSL is forced by GPIO value
 
     // PB7 is selected as nCS by software
@@ -50,7 +50,7 @@ void mySPI1() {
     // (GPIOB -> ODR) = setBit((GPIOB -> ODR), GPIO_ODR_OD7_Pos);
     // ENABLE;
 
-    // Microcontroler is set up as master or slave?
+    // Microcontroler is set up as master or slave
     SPI1->CR1 = setBit((SPI1->CR1), SPI_CR1_MSTR_Pos); // Microcontroller is selected as Master
     
     GPIOA->MODER = GPIOA->MODER | GPIO_MODER_MODER6_1; // PA6 - MISO
@@ -61,7 +61,7 @@ void mySPI1() {
     GPIOA->OSPEEDR = GPIOA->OSPEEDR | GPIO_OSPEEDER_OSPEEDR0_0; // PB5 - 100 MHz
     GPIOA->OSPEEDR = GPIOA->OSPEEDR | GPIO_OSPEEDER_OSPEEDR0_1;
 
-    // SPI1
+    // SPI1 AF
     GPIOA->AFR[0] = setBit(GPIOA->AFR[0], GPIO_AFRL_AFRL6_Pos); // PA6 - MISO
     GPIOA->AFR[0] = setBit(GPIOA->AFR[0], (GPIO_AFRL_AFRL6_Pos+2UL));
     GPIOA->AFR[0] = setBit(GPIOA->AFR[0], GPIO_AFRL_AFRL5_Pos); // PA5 - SCK
@@ -73,7 +73,6 @@ void mySPI1() {
 
 int SPI1_Recieve() {
 
-    //wait_ns(700);
     int data;
     while((SPI1->SR) & SPI_SR_BSY) {
 
@@ -81,13 +80,13 @@ int SPI1_Recieve() {
 
     SPI1->DR = 0;
 
-    //wait_us(10);
+    // todo: asegurar que no es necesario
+    //wait_us(10); 
     while(!((SPI1->SR) & SPI_SR_RXNE)) {
 
     }
 
     data = SPI1->DR;
     
-    //wait_ns(700);
     return data;
 }

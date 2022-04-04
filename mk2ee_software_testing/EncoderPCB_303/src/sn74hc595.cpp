@@ -1,5 +1,6 @@
 #include "sn74hc595.hpp"
 
+// TODO: No usar el SPI hecho por MBED
 SPI shPo(PC_12, PC_11, PC_10); // SPI4
 DigitalOut csn_shpo(PB_12, 0);
 
@@ -11,6 +12,7 @@ void setUpSpi4() {
 
 }
 
+// todo: es privada
 void latchSignal() {
 
     csn_shpo = 1;
