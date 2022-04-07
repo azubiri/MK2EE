@@ -1,9 +1,7 @@
-#ifndef AS5047_H
-#define AS5047_H
+#ifndef AS5047_HPP
+#define AS5047_HPP
 
-#define PULSE_DURATION 25 // Pulse duration SRCLK or RCLK high or low (in nanoseconds) 
-
-// TODO: Comentar que estas enumeraciones no se usan para este proyecto.
+// As5047Flag, As5047Command and As5047Diagnostics enums are not used for this project
 typedef enum {
     AS_FLAG_PARITY = 0x8000,
     AS_FLAG_READ = 0x4000,
@@ -24,9 +22,22 @@ typedef enum {
     AS_DIAG_LOW_MAGNETIC = 0x0800,
 } As5047Diagnostics;
 
-// todo: function prototypes
-int mask(int sensor_result);
-float get_angle(int sensor_result);
-bool parity_check(int sensor_result);
+class As5047 {
+
+    private:
+
+        int mask(int sensor_result);
+    
+    public:
+
+        As5047();
+
+        ~As5047();
+
+        float get_angle(int sensor_result);
+
+        bool parity_check(int sensor_result);
+
+};
 
 #endif

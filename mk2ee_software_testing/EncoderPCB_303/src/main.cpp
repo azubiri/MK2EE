@@ -29,6 +29,15 @@
  * - SN74HC595 and 2 RGB LEDs
  * - AS5047 encoder and STMicrocontroller F303RE
  * 
+ * Data transfer format:
+ * Bit0: Not used
+ * Bit1: Red colour from RGB LED1
+ * Bit2: Green colour from RGB LED1
+ * Bit3: Blue colour from RGB LED1
+ * Bit4: Blue colour from RGB LED2
+ * Bit5: Green colour from RGB LED2
+ * Bit6: Red colour from RGB LED2
+ * Bit7: CSn signal for the Encoder AS5047
  * TODO: Explicar conectores
  * TODO: Explicar cómo funciona
  * 
@@ -39,27 +48,22 @@
  * 
  */
 
-#include "mk2ee.hpp" //todo: poner todos los includes
+#include <mbed.h>
+#include "mk2ee_definitions.hpp"
+#include "mk2eeSPI1.hpp"
+#include "mk2eeSPI.hpp"
+#include "as5047.hpp"
+#include "sn74hc595.hpp"
 
 static UnbufferedSerial pc(USBTX, USBRX, 9600); // tx, rx
 
 /**
  * @brief Default values for each output of the SN74HC595 component. RGB LEDs from EncoderPCB board will light with purple colour to indicate
  * the board is in default mode. LEDs are turn on with a low level. CSn output is turn on to avoid an encoder reading.
- * 
- * TODO: Poner ésto arriba
- * Bit outputs information:
- * Bit0: Not used
- * Bit1: Red colour from RGB LED1
- * Bit2: Green colour from RGB LED1
- * Bit3: Blue colour from RGB LED1
- * Bit4: Blue colour from RGB LED2
- * Bit5: Green colour from RGB LED2
- * Bit6: Red colour from RGB LED2
- * Bit7: CSn signal for the Encoder AS5047
  */
 void default_shiftRegister() {
 
+    Sn74hc595 encoder_sh_po;
     uint16_t data_tx = 0;
 
     data_tx = clearBit(data_tx, LED1Red); // ON
@@ -70,14 +74,20 @@ void default_shiftRegister() {
     data_tx = clearBit(data_tx, LED2Blue); // ON
     data_tx = setBit(data_tx, SH_PO_CSn); // OFF
     
-    shiftOut(data_tx);
+    encoder_sh_po.shiftOut(data_tx);
 
 }
 
 void read_angle_encoder() {
-
-    int receive_sh_po; // TODO: viene del encoder
-    
+    // Clock frequency
+    // Maximum frequencies:
+    // AS5047=10MHz
+    // STM32F303RE_APB2=72MHz
+    // SN74HC595_3.3V=5MHz
+    int receive_encoder;
+    Sn74hc595 encoder_sh_po;
+    As5047 encoder;
+    Mk2eeSPI1 spi1;
     //////////////////////////////////////////////////////////////
     // Enable an SPI Communication
     //////////////////////////////////////////////////////////////
@@ -97,7 +107,7 @@ void read_angle_encoder() {
     //printf("The time taken was %llu microseconds\n", std::chrono::duration_cast<std::chrono::microseconds>(t.elapsed_time()).count());
 
     // Update sh-po outputs
-    shiftOut(data_tx);
+    encoder_sh_po.shiftOut(data_tx);
 
     // Wait at least 350ns for a SPI communication
     wait_ns(700); // TODO: Asegurar con osc. que realmente espera 700ns
@@ -108,7 +118,7 @@ void read_angle_encoder() {
     // Angle reading in bits through MISO connection
     // angle = encoder.write(AS_CMD_ANGLE);
     // angle = myWrite(AS_CMD_ANGLE);
-    receive_sh_po = SPI1_Recieve();
+    receive_encoder = spi1.receive_spi();
     //printf("Received bytes: %x\n\n", angle);
     //////////////////////////////////////////////////////////////
     // Desable an SPI Communication
@@ -117,14 +127,14 @@ void read_angle_encoder() {
     data_tx = setBit(data_tx, SH_PO_CSn);
 
     // Update sh-po outputs
-    shiftOut(data_tx);
+    encoder_sh_po.shiftOut(data_tx);
 
     // Wait at least 350ns for a SPI communication
     wait_ns(700);
     
-    if(parity_check(receive_sh_po)) {
+    if(encoder.parity_check(receive_encoder)) {
         // Convert range from 0 to 2^14-1 to 0 - 360 degrees
-        float anglef = get_angle(receive_sh_po);
+        float anglef = encoder.get_angle(receive_encoder);
         printf("Angle: %.2f degrees\r\n", anglef );
     }
     else {
@@ -138,6 +148,7 @@ void leds() {
     char colour;
     bool isColour = true;
     uint16_t data_tx;
+    Sn74hc595 encoder_sh_po;
     
     printf("LEDs Menu:\n");
     while(isColour) {
@@ -236,21 +247,20 @@ void leds() {
         }
     
     // Update sh-po outputs
-    shiftOut(data_tx);
+    encoder_sh_po.shiftOut(data_tx);
 
     }
 
 }
 
+
+
 int main() {
 
     char option;
-    // AS5047 spi confuguration
-    setUpSpi4();
 
     // Default values at output registers
     default_shiftRegister();
-
     while(1) {
         
         printf("\nMain Menu:\n");
@@ -281,9 +291,7 @@ int main() {
                 printf("-------------------------\n");
                 printf("----SPI Configuration----\n");
                 printf("-------------------------\n");
-                printSPI1Config();
-                mySPI1();
-                printSPI1Config();
+                
                 break;
 
             default:

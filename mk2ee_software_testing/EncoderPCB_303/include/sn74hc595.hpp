@@ -1,13 +1,28 @@
-#ifndef SN74HC595_H
-#define SN74HC595_H
+#ifndef SN74HC595_HPP
+#define SN74HC595_HPP
 
 #include <mbed.h>
 
 // todo: ns
-#define PULSE_DURATION 25
+#define PULSE_DURATION_NS 25
 
-void setUpSpi4();
-void latchSignal();
-void shiftOut(uint16_t data_tx);
+class Sn74hc595 {
+
+    private:
+        
+        SPI shPo; // SPI4
+        DigitalOut csn_shpo;
+
+        void latchSignal();
+
+    public:
+
+        Sn74hc595();
+
+        ~Sn74hc595();
+
+        void shiftOut(uint16_t data_tx);
+
+};
 
 #endif

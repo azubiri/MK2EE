@@ -1,13 +1,21 @@
 #include "as5047.hpp"
 // todo: typedef int to enconderangle
 
-int mask(int sensor_result) {
+int As5047::mask(int sensor_result) {
 
     return sensor_result & 0x3FFF; // return lowest 14-bits
 
 }
 
-float get_angle(int sensor_result) {
+As5047::As5047() {
+
+}
+
+As5047::~As5047() {
+    
+}
+
+float As5047::get_angle(int sensor_result) {
 
     float conversor, angle;
     conversor = 360.0 / 16384.0;
@@ -23,7 +31,7 @@ float get_angle(int sensor_result) {
  * @return true 
  * @return false 
  */
-bool parity_check(int sensor_result) {
+bool As5047::parity_check(int sensor_result) {
 
     // Use the LSb of result to keep track of parity (0 = even, 1 = odd)
     int result = sensor_result;
