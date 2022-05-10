@@ -69,7 +69,7 @@ void Mk2eeSPI1::format_spi(bool eight_bits) {
 }
 
 void Mk2eeSPI1::frequency_spi(int freq) {
-    frequency(SPI1, freq);
+    if(frequency(SPI1, freq));
 }
 
 void Mk2eeSPI1::polarity_phase_spi(int mode) {

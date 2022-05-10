@@ -92,56 +92,75 @@ void Mk2eeSPI::polarity_phase(SPI_TypeDef *spi_peripheral, int mode) {
 }
 
 // Max. Frequency: 72 MHz
-void Mk2eeSPI::frequency(SPI_TypeDef *spi_peripheral, int freq) {
+int Mk2eeSPI::frequency(SPI_TypeDef *spi_peripheral, int freq) {
     // Frequency at 72MHz/256=281.25KHz
-    if ( freq < (MAX_FREQ_F303RE_KHZ / 128) ) {
+    // freq < (MAX_FREQ_F303RE_KHZ / 128)
+    if ( freq < (MAX_FREQ_F303RE_KHZ >> 7) ) {
         printf("Menos\n");
         spi_peripheral->CR1 = spi_peripheral->CR1 | SPI_CR1_BR_0;
         spi_peripheral->CR1 = spi_peripheral->CR1 | SPI_CR1_BR_1;
         spi_peripheral->CR1 = spi_peripheral->CR1 | SPI_CR1_BR_2;
+        return 1;
     }
     // Frequency at 72MHz/128=562.5KHz
-    else if ( (freq >= (MAX_FREQ_F303RE_KHZ / 128)) && (freq < (MAX_FREQ_F303RE_KHZ / 64)) ) {
+    // (MAX_FREQ_F303RE_KHZ / 128) <= freq < (MAX_FREQ_F303RE_KHZ / 64)
+    else if ( (freq >= (MAX_FREQ_F303RE_KHZ >> 7)) && (freq < (MAX_FREQ_F303RE_KHZ >> 6)) ) {
         printf("Mas\n");
         spi_peripheral->CR1 = spi_peripheral->CR1 & ~(SPI_CR1_BR_0);
         spi_peripheral->CR1 = spi_peripheral->CR1 | SPI_CR1_BR_1;
         spi_peripheral->CR1 = spi_peripheral->CR1 | SPI_CR1_BR_2;
+        return 1;
     }
     // Frequency at 72MHz/64=1.125MHz
-    else if ( (freq >= (MAX_FREQ_F303RE_KHZ / 64)) && (freq < (MAX_FREQ_F303RE_KHZ / 32)) ) {
+    // (MAX_FREQ_F303RE_KHZ / 64) <= freq < (MAX_FREQ_F303RE_KHZ / 32)
+    else if ( (freq >= (MAX_FREQ_F303RE_KHZ >> 6)) && (freq < (MAX_FREQ_F303RE_KHZ >> 5)) ) {
         spi_peripheral->CR1 = spi_peripheral->CR1 | SPI_CR1_BR_0;
         spi_peripheral->CR1 = spi_peripheral->CR1 & ~(SPI_CR1_BR_1);
         spi_peripheral->CR1 = spi_peripheral->CR1 | SPI_CR1_BR_2;
+        return 1;
     }
     // Frequency at 72MHz/32=2.25MHz
-    else if ( (freq >= (MAX_FREQ_F303RE_KHZ / 32)) && (freq < (MAX_FREQ_F303RE_KHZ / 16)) ) {
+    // (MAX_FREQ_F303RE_KHZ / 32) <= freq < (MAX_FREQ_F303RE_KHZ / 16)
+    else if ( (freq >= (MAX_FREQ_F303RE_KHZ >> 5)) && (freq < (MAX_FREQ_F303RE_KHZ >> 4)) ) {
         spi_peripheral->CR1 = spi_peripheral->CR1 & ~(SPI_CR1_BR_0);
         spi_peripheral->CR1 = spi_peripheral->CR1 & ~(SPI_CR1_BR_1);
         spi_peripheral->CR1 = spi_peripheral->CR1 | SPI_CR1_BR_2;
+        return 1;
     }
     // Frequency at 72MHz/16=4.5MHz
-    else if ( (freq >= (MAX_FREQ_F303RE_KHZ / 16)) && (freq < (MAX_FREQ_F303RE_KHZ / 8)) ) {
+    // (MAX_FREQ_F303RE_KHZ / 16) <= freq < (MAX_FREQ_F303RE_KHZ / 8)
+    else if ( (freq >= (MAX_FREQ_F303RE_KHZ >> 4)) && (freq < (MAX_FREQ_F303RE_KHZ >> 3)) ) {
         spi_peripheral->CR1 = spi_peripheral->CR1 | SPI_CR1_BR_0;
         spi_peripheral->CR1 = spi_peripheral->CR1 | SPI_CR1_BR_1;
         spi_peripheral->CR1 = spi_peripheral->CR1 & ~(SPI_CR1_BR_2);
+        return 1;
     }
     // Frequency at 72MHz/8=9MHz
-    else if ( (freq >= (MAX_FREQ_F303RE_KHZ / 8)) && (freq < (MAX_FREQ_F303RE_KHZ / 4)) ) {
+    // (MAX_FREQ_F303RE_KHZ / 8) <= freq < (MAX_FREQ_F303RE_KHZ / 4)
+    else if ( (freq >= (MAX_FREQ_F303RE_KHZ >> 3)) && (freq < (MAX_FREQ_F303RE_KHZ >> 2)) ) {
         spi_peripheral->CR1 = spi_peripheral->CR1 & ~(SPI_CR1_BR_0);
         spi_peripheral->CR1 = spi_peripheral->CR1 | SPI_CR1_BR_1;
         spi_peripheral->CR1 = spi_peripheral->CR1 & ~(SPI_CR1_BR_2);
+        return 1;
     }
     // Frequency at 72MHz/4=18MHz
-    else if ( (freq >= (MAX_FREQ_F303RE_KHZ / 4)) && (freq < (MAX_FREQ_F303RE_KHZ / 2)) ) {
+    // (MAX_FREQ_F303RE_KHZ / 4) <= freq < (MAX_FREQ_F303RE_KHZ / 2)
+    else if ( (freq >= (MAX_FREQ_F303RE_KHZ >> 2)) && (freq < (MAX_FREQ_F303RE_KHZ >> 1)) ) {
         spi_peripheral->CR1 = spi_peripheral->CR1 | SPI_CR1_BR_0;
         spi_peripheral->CR1 = spi_peripheral->CR1 & ~(SPI_CR1_BR_1);
         spi_peripheral->CR1 = spi_peripheral->CR1 & ~(SPI_CR1_BR_2);
+        return 1;
     }
     // Frequency at 72MHz/2=36MHz
-    else if ( freq >= (MAX_FREQ_F303RE_KHZ / 2) ) {
+    // (MAX_FREQ_F303RE_KHZ / 2) <= freq
+    else if ( freq >= (MAX_FREQ_F303RE_KHZ >> 1) ) {
         spi_peripheral->CR1 = spi_peripheral->CR1 & ~(SPI_CR1_BR_0);
         spi_peripheral->CR1 = spi_peripheral->CR1 & ~(SPI_CR1_BR_1);
         spi_peripheral->CR1 = spi_peripheral->CR1 & ~(SPI_CR1_BR_2);
+        return 1;
+    }
+    else {
+        return 0;
     }
 }
 

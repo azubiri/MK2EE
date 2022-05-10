@@ -17,7 +17,7 @@ protected:
     void gpio_pin_speed(GPIO_TypeDef *gpio, int pin_number, int pin_speed);
     void gpio_set_af(GPIO_TypeDef *gpio, int pin_number, int af);
     void format(SPI_TypeDef *spi_peripheral, bool eight_bits);
-    void frequency(SPI_TypeDef *spi_peripheral, int freq);
+    int frequency(SPI_TypeDef *spi_peripheral, int freq);
     void polarity_phase(SPI_TypeDef *spi_peripheral, int mode);
     void csn_sw_hw(SPI_TypeDef *spi_peripheral, bool sw_hw);
     void master_slave(SPI_TypeDef *spi_peripheral, bool master);
