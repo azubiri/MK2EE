@@ -20,3 +20,22 @@ In this repository you will find the several files to replicate and improve this
 * Mbed OS (optional)
 ### Software utilities
 * Jupyter Notebook
+
+## ToDo list
+### Mechanical Part
+- [ ] Paste one of the gear that is coupled with a stepper motor.
+- [ ] Make a new greapper using a microservo and energised with 5V.
+
+### Electronical Part
+- [ ] Solder 2 EncoderPCB
+- [ ] Solder 2 DriverPCB
+- [ ] Solder 1 EncoderPCB2
+- [ ] Solder 1 SupplyPCB
+
+### Firmware Part
+- [x] Test EncoderPCB with a Nucleo Board F303RE
+- [x] Test DriverPCB with a Nucleo Board F303RE
+- [ ] Test EncoderPCB with a Nucleo Board F411RE
+- [ ] Test DriverPCB with a Nucleo Board F411RE
+- [ ] Test EncoderPCB2 with a Nucleo Board F411RE
+- [ ] Final testing SupplyPCB + EncoderPCB2 + 3xEncoderPCB + 3xDriverPCB
