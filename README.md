@@ -32,6 +32,8 @@ In this repository you will find the several files to replicate and improve this
 - [ ] Solder 1 EncoderPCB2
 - [ ] Solder 1 SupplyPCB
 
+(see some important information in the README file inside mk2ee_kicad_project)
+
 ### Firmware Part
 - [x] Test EncoderPCB with a Nucleo Board F303RE
 - [x] Test DriverPCB with a Nucleo Board F303RE
@@ -39,3 +41,5 @@ In this repository you will find the several files to replicate and improve this
 - [ ] Test DriverPCB with a Nucleo Board F411RE
 - [ ] Test EncoderPCB2 with a Nucleo Board F411RE
 - [ ] Final testing SupplyPCB + EncoderPCB2 + 3xEncoderPCB + 3xDriverPCB
+
+(see more details in the README file inside mk2ee_software_testing folder)
