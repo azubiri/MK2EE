@@ -24,7 +24,7 @@ In this repository you will find the several files to replicate and improve this
 ## ToDo list
 ### Mechanical Part
 - [ ] Paste one of the gear that is coupled with a stepper motor.
-- [ ] Make a new greapper using a microservo and energised with 5V.
+- [ ] Make a new gripper using a microservo and energised with 5V.
 
 ### Electronical Part
 - [ ] Solder 2 EncoderPCB
