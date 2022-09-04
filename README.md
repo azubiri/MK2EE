@@ -37,8 +37,8 @@ In this repository you will find the several files to replicate and improve this
 ### Firmware Part
 - [x] Test EncoderPCB with a Nucleo Board F303RE
 - [x] Test DriverPCB with a Nucleo Board F303RE
-- [ ] Test EncoderPCB with a Nucleo Board F411RE
-- [ ] Test DriverPCB with a Nucleo Board F411RE
+- [x] Test EncoderPCB with a Nucleo Board F411RE
+- [x] Test DriverPCB with a Nucleo Board F411RE
 - [ ] Test EncoderPCB2 with a Nucleo Board F411RE
 - [ ] Final testing SupplyPCB + EncoderPCB2 + 3xEncoderPCB + 3xDriverPCB
 
