@@ -1,5 +1,5 @@
 # Electronical part
-You can use these files to modify the circuits and PCBs made for this project.
+You can use these files to modify the circuits and PCBs with Kicad.
 
 ## Reworkings
 - The linear regulator that is used in the DriverPCB design, is not found in the market. You can use other regulators with the same case style, but the function of each pin is different.
