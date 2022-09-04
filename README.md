@@ -9,6 +9,8 @@ These additions which are implemented in this project are the following:
 
 In this repository you will find the several files to replicate and improve this purposed robotic arm. It is structured by the mechanical part, electronic part and software that have been used to test the electronic part. In addition, there is anohter folder where you will find some software tools.
 
+This project was a part of Master's Thesis. You can see more details about it in the documentation folder.
+
 ## Software requirements
 ### Mechanical part
 * Autodesk Fusion 360 (recommended)
